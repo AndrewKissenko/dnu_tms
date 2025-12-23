@@ -1,0 +1,109 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - nleinc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0-rc.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="//code.jquery.com/ui/1.12.0-rc.1/jquery-ui.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TMS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="SystemHome" asp-action="DispatchBoard" id="dispatch-board">Dispatch Board</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="SystemHome" asp-action="Index" id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Trucks" id="open-trucks" asp-action="GetOpenTrucks">Open Trucks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Trailers" id="open-trailers" asp-action="GetOpenTrailers">Open Trailers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Drivers" id="drivers" asp-action="Index">Drivers</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" asp-area="" asp-controller="" data-toggle="dropdown" asp-action="" aria-haspopup="true" aria-expanded="false" id="depot">Depot<span class="badge badge-danger badge-pill margin-left3"></span></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Trucks" id="trucks" asp-action="Index">Trucks</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Trailers" id="trailers" asp-action="Index">Trailers</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cities" id="cities" asp-action="Index">Cities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clients" id="clients" asp-action="Index">Clients</a>
+                        </li>
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" id="users" asp-action="Index">Users</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" asp-area="" asp-controller="Updates" id="updates" data-toggle="dropdown" asp-action="Index" aria-haspopup="true" aria-expanded="false">Updates<span class="badge badge-danger badge-pill margin-left3"></span></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" asp-area="" asp-controller="Updates" asp-action="_GetActiveApplications" id="hireMe">Hire me <span class="badge badge-danger badge-pill margin-left3"></span></a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Updates" asp-action="GetActiveQuoteRequests" id="quoteMe">Quote me <span class="badge badge-danger badge-pill margin-left3"></span></a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Updates" asp-action="GetActiveContactRequests" id="contactMe">Contact me <span class="badge badge-danger badge-pill margin-left3"></span></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" asp-controller="Positions" asp-action="Index">Manage vacancies</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item" id="log-out">
+                                <a class="nav-link text-dark" asp-controller="Login" id="search-board" asp-action="Logout">Log out</a>
+                            </li>
+
+                        }
+
+
+                    </ul>
+
+                </div>
+                @*<span style="color:red"> @User.Identity.Name</span>*@
+            </div>
+            How you doin' <span style="color:red;margin-left:5px; margin-right:5px"> @User.Identity.Name </span>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - nleinc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/plugins/js/updates.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+}

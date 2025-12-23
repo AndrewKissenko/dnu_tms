@@ -1,0 +1,133 @@
+﻿
+@model tms_inc.Models.Employees.Applicant
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div>
+        <a asp-action="_GetActiveApplications" class="padding25 non-printable">Back to List</a>
+    </div>
+
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="~/plugins/css/application.css">
+        <link href="~/plugins/signature-pad/assets/jquery.signaturepad.css" rel="stylesheet">
+        <title>Driver's application form</title>
+    </head>
+    <body>
+
+        <div class="text-left main-text form-card" style="padding: 50px">
+            <div>
+                <fieldset>
+                    <button type="button" class="btn btn-outline-primary print">Print</button>
+                    <div>
+                        <div><i class="fas fa-angle-double-down fa-2x non-printable" id="scroll-down"></i></div>
+                        @Html.Raw(Model.TableHtml)
+                    </div>
+                    <div>
+                        Applied on @Model.CreatedAt.ToShortDateString()
+                    </div>
+                    <div>
+
+                    </div>
+                    <div class="sigPad canvas-size">
+                        <ul class="sigNav">
+                            <li class="drawIt" id="drawIt"><a href="#draw-it">Drawn signature</a></li>
+                        </ul>
+                        <div>
+                            <div class="typed"></div>
+                            <canvas class="pad"></canvas>
+                            <input type="hidden" name="output" class="output" readonly>
+                        </div>
+
+                    </div>
+                    @if (Model.Files.Any(x => x.FileType == tms_inc.Models.File.FileType.Signature))
+                    {
+                        var file = Model.Files.FirstOrDefault(x => x.FileType == tms_inc.Models.File.FileType.Signature);
+                <div class="picture-box padding25">
+                    <h5>Imported signature</h5>
+                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(file.File))" class="license-picture">
+                </div>
+                    }
+                </fieldset>
+            </div>
+        </div>
+        <div>
+            <a asp-action="_GetActiveApplications" class="padding25 non-printable">Back to List</a>
+        </div>
+        <div class="picture-box">
+            <h3>Driver's license pictures</h3>
+            @foreach (var item in Model.Files)
+            {
+                if(item.File != null && item.FileType != tms_inc.Models.File.FileType.Signature) {
+                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.File))" class="license-picture">
+                }
+            }
+
+        </div>
+
+        @*sys*@
+
+
+        <script src="~/plugins/jquery/jquery-1.11.3.min.js"></script>
+        <script src="~/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+
+        <script src="~/plugins/signature-pad/assets/json2.min.js"></script>
+        <script src="~/plugins/signature-pad/assets/jquery.signaturepad.js"></script>
+
+        <script>
+        $(document).ready(function () {
+            var $canvas,
+                onResize = function (event) {
+                    let width;
+                    let heigth;
+                    if (window.innerWidth <= 375) {
+                        width = window.innerWidth;
+                        heigth = 150;
+                    }
+                    else {
+                        width = window.innerWidth - 600;
+                        heigth = 200;
+                    }
+
+                    $canvas.attr({
+                        height: heigth,
+                        width: width
+                    });
+                };
+            $canvas = $('canvas');
+            window.addEventListener('orientationchange', onResize, false);
+            window.addEventListener('resize', onResize, false);
+            onResize();
+
+            var sig = '@Json.Serialize(Model.Signature)';
+
+            sig = sig.substring(1, sig.length - 1);
+
+            $('.sigPad').signaturePad({
+                displayOnly: true
+            }).regenerate(sig);
+
+            $("#scroll-down").click(function () {
+                $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+            })
+        });
+
+        $(".print").click(function () {
+            window.print();
+        });
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
+}
+
+

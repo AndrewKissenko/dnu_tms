@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TMS inc.</title>
+    <!-- viewport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- styles -->
+    <!-- helpers -->
+    <link rel="stylesheet" href="~/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="~/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- strock gap icons -->
+    <link rel="stylesheet" href="~/plugins/Stroke-Gap-Icons-Webfont/style.css">
+    <!-- revolution slider css -->
+    <link rel="stylesheet" href="~/plugins/revolution/css/settings.css">
+    <link rel="stylesheet" href="~/plugins/revolution/css/layers.css">
+    <link rel="stylesheet" href="~/plugins/revolution/css/navigation.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="~/plugins/flaticon/flaticon.css">
+    <!-- jQuery ui css -->
+    <link href="~/plugins/jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="~/plugins/owl.carousel-2/assets/owl.carousel.css">
+    <link rel="stylesheet" href="~/plugins/owl.carousel-2/assets/owl.theme.default.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="~/plugins/animate.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="~/plugins/fancyapps-fancyBox/source/jquery.fancybox.css">
+
+    <link href="~/plugins/fontawesome-free/css/all.css" rel="stylesheet">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="~/plugins/css/style.css">
+    <!-- responsive stylesheet -->
+    <link rel="stylesheet" href="~/plugins/css/responsive.css">
+
+
+
+</head>
+<body>
+
+    <!-- Start header -->
+    <header id="header" class="stricky">
+        <div class="thm-container clearfix">
+            <div class="logo pull-left">
+                <a>
+                    <img src="~/images/logo-white.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info pull-right align-center">
+
+                <div class="info-box">
+                    <div class="icon-box no-border">
+                        <i class="icon icon-Timer"></i>
+                    </div>
+                    <div class="text-box">
+                        <p class="highlighted">Mon - Sat 7.00 - 17.00</p>
+                        <p>Sunday Closed</p>
+                        <a style="color:green" id="onlie" href="@Url.Action("ContactUs", "Home")">Online 24/7</a>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="icon-box">
+                        <i class="icon icon-Phone2"></i>
+                    </div>
+                    <div class="text-box">
+                        <p class="highlighted">Call Us:</p>
+                        <p class="phone-number">(773) 123 4567</p>
+                    </div>
+                </div>
+                <div class="info-box search-box-wrapper">
+                    <div class="icon-box">
+                        <i class="flaticon-search51"></i>
+                    </div>
+                    <form action="index.html#" class="search-box-holder">
+                        <div class="search-box">
+                            <div class="form">
+                                <input type="text" placeholder="Track Your Shipment">
+                                <button type="submit"><span>GO</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="info-box">
+                    <div class="sign-in">
+                        <a href="@Url.Action("Index", "Login")">
+                            <i class="fas fa-sign-in-alt fa-3x"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <!-- End header  -->
+    <!-- Start mainmenu -->
+    <nav class="main-menu-wrapper stricky">
+        <div class="thm-container menu-gradient ">
+            <div class="clearfix">
+                <div class="nav-holder pull-left">
+                    <div class="nav-header">
+                        <button><i class="fa fa-bars"></i></button>
+                    </div>
+                    <div class="nav-footer">
+                        <ul class="nav">
+                            <li class="has-submenu">
+                                <a href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                           
+                            <li class="has-submenu">
+                                <a href="@Url.Action("Index", "Services")">Services</a>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="@Url.Action("Index", "Career")">Career</a>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="@Url.Action("AvailableTrucks", "Home")">Available trucks</a>
+                            </li>
+                            <li><a href="@Url.Action("ContactUs", "Home")">contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="free-qoute-button pull-right">
+                    <a href="@Url.Action("RequestQuote", "Home")">Get Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End mainmenu -->
+
+    @RenderBody()
+
+
+
+
+    <footer id="footer" class="sec-padding">
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 footer-widget">
+                    <div class="about-widget">
+                        <a><img src="~/images/logo-white.png" alt="logo" /></a>
+                        <p style="color:gray" class="padding-left25">Transportation of goods all across our country. Freight forwarding and transportation. Logistics Consulting. Additional Integrated Logistics Services.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-9 col-sm-4 footer-widget">
+                    <p style="color:gray; font-size:18px;" class="padding-left25">
+                        TMS company offers comprehensive service at the highest quality, accompanied with reasonable pricing.
+                    </p>
+                    <div class="title padding-left25">
+                        <h3><span>ILLINOIS</span></h3>
+                    </div>
+                    <ul class="contact-infos padding-left25">
+                        <li>
+                            <div class="icon-box">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="text-box">
+                                <p><b>TMS, Inc.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>(773) 123 4567</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <i class="fa fa-envelope-o"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>email@example.net</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <i class="icon icon-Timer"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>Monday - Saturday : 7.00 - 17.00</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="bottom-bar">
+        <div class="thm-container clearfix">
+            <div class="pull-left">
+                <p>Copyright © TMS Inc. 2021. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="appModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3 id="appModalTitle"></h3>
+    <div id="appModalBody"></div>
+    <div style="margin-top:12px; text-align:right;">
+      <button type="button" id="appModalOk">OK</button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- jQuery js -->
+    <script src="~/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jQuery ui js -->
+    <script src="~/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <!-- owl carousel js -->
+    <script src="~/plugins/owl.carousel-2/owl.carousel.min.js"></script>
+    <!-- jQuery appear -->
+    <script src="~/plugins/jquery-appear/jquery.appear.js"></script>
+    <!-- jQuery countTo -->
+    <script src="~/plugins/jquery-countTo/jquery.countTo.js"></script>
+    <!-- jQuery validation -->
+    <script src="~/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <!-- mixit up -->
+    <script src="~/plugins/jquery.mixitup.min.js"></script>
+
+    <!-- revolution slider js -->
+    <script src="~/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- fancy box -->
+    <script src="~/plugins/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
+    <!-- type script -->
+    <script src="~/plugins/typed.js-master/dist/typed.min.js"></script>
+
+
+   
+    <!-- theme custom js  -->
+    <script src="~/plugins/js/main.js"></script>
+
+
+
+</body>
+</html>

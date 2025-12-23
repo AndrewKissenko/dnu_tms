@@ -1,0 +1,16 @@
+﻿@model IEnumerable<tms_inc.Models.GetInTouch>
+@{
+    Layout = "_Layout";
+}
+<h3>Contact me requests</h3>
+
+<nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info active" id="pendingContactRequests" aria-current="page"><i class="fa fa-spinner" aria-hidden="true"> pending</i></a>
+    <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info" id="processedContactRequests"><i class="fa fa-check-square-o" aria-hidden="true"> processed</i></a>
+    <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info" id="deletedContactRequests"><i class="fa fa-archive" aria-hidden="true"> deleted</i></a>
+</nav>
+
+<div id="result">
+    @await Html.PartialAsync("ContactMe/Table", Model)
+
+</div>

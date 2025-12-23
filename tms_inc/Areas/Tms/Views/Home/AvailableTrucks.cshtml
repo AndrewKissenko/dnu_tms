@@ -1,0 +1,43 @@
+﻿@model List<List<tms.Models.MailTableVM>>
+
+<section class="inner-banner">
+    <div class="thm-container">
+        <h2>Available trucks for today</h2>
+        <ul class="breadcumb">
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> Home</a></li>
+            <li><span>Available trucks</span></li>
+        </ul>
+    </div>
+</section>
+<section>
+
+    <p id="truck-list" class="truck-list">
+        @foreach (var collection in Model)
+        {
+            <div style="background-color: #000000; border: 1px solid #000000; color: #FFFFFF; font-weight: bold; margin-top: 25px; text-align: left; padding-left: 20px;">
+                @collection[0].UserName @collection[0].UserName2[0]
+            </div>
+            <table width="100%" style="border: 1px solid;border-collapse: collapse;border-spacing: 0;">
+                <thead>
+                    <tr style=" background-color: #E9E9E9; border-top: 1px solid #000000; font-weight: bold; padding: 5px 0; ">
+                        <th valign="middle" style=" display: table-cell; vertical-align: inherit; font-weight: bold; text-align:center">Truck</th>
+                        <th valign="middle" style=" display: table-cell; vertical-align: inherit; font-weight: bold; text-align:center">@DateTime.Now.Date.ToShortDateString()</th>
+                        <th valign="middle" style=" display: table-cell; vertical-align: inherit; font-weight: bold; text-align:center">Comment</th>
+                    </tr>
+                </thead>
+                <tbody style=" display: table-row-group; vertical-align: middle; margin-bottom:25px">
+                    @foreach (var item in collection)
+                    {
+                        <tr style=" background-color: #FFFFFF;">
+                            <td style="width: 100px; text-align:center; border: 1px solid black;" valign="middle"> @item.Truck</td>
+                            <td style="width: 100px; text-align:center; border: 1px solid black;" valign="middle">@item.CityName, @item.CityState</td>
+                            <td style="width: 100px; text-align:center; border: 1px solid black;" valign="middle">@item.Comment</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        }
+    </p>
+    <p class="padding-left15"> Please call <br /> Paul K.<br /><b>email@example.net</b> <br /><b> 773 - 123- 4567</b><br />Thank you and have a nice day! </p>
+</section>

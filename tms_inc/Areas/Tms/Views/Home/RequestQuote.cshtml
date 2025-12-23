@@ -1,0 +1,66 @@
+﻿
+@model tms_inc.Models.RequestedQuote.RequestedQuote
+
+<section class="inner-banner">
+    <div class="thm-container">
+        <h2>Request a Quote</h2>
+        <ul class="breadcumb">
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> Home</a></li>
+            <li><span>Request a Quote</span></li>
+        </ul>
+    </div>
+</section>
+
+<section class="sec-padding">
+    <div class="thm-container">
+        <div class="sec-title">
+            <h2><span>request a quote</span></h2>
+         
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-sm-12 col-xs-12 pull-left">
+                <form  method="post" class="contact-form contact-page">
+                    <p><input type="text" placeholder="Frieght Type" name="freightType"></p>
+                    <p><input required type="text" placeholder="City of Departure" name="departureCity"></p>
+                    <p><input required type="text" placeholder="Delivery City" name="deliveryCity"></p>
+                    <p><input type="text" placeholder="Total Gross Weight" name="totalGrossWeight"></p>
+                    <p><input type="text" placeholder="Dimention" name="dimention"></p>
+                    <p><input type="email" placeholder="Email" name="email"></p>
+                    <p><input required type="number" placeholder="Phone Number" name="phone"></p>
+                    <p><textarea name="message" placeholder="Message"></textarea></p>
+                    <button type="submit" class="thm-btn" value="Save">Submit Now <i class="fa fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="col-md-5 hidden-sm text-right pull-right">
+                <img src="~/images/request-qoute-man.jpg" alt="Awesome Image" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec-padding rqa-feature">
+    <div class="thm-container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 bg-1 text-center">
+                <div class="single-rqa-feature">
+                    <i class="fa fa-globe"></i>
+                    <h3>Safe and Secure</h3>
+                   
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 bg-2 text-center">
+                <div class="single-rqa-feature">
+                    <i class="fa fa-globe"></i>
+                    <h3>Great support</h3>
+              
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 bg-3 text-center">
+                <div class="single-rqa-feature">
+                    <i class="fa fa-globe"></i>
+                    <h3>fast delivery</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

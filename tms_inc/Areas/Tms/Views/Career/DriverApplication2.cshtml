@@ -1,0 +1,171 @@
+﻿
+@{ Layout = null; }
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="~/plugins/css/application.css">
+    <link href="~/plugins/signature-pad/assets/jquery.signaturepad.css" rel="stylesheet">
+    <title>Driver's application form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-address">
+            <div>
+                <img src="~/images/logo-new.png" id="logo" alt="Logo" />
+            </div>
+            <div class="address">
+                <div class="compnany-name">TMS Inc.</div>
+                <div>773-964-3462</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <div id="stepper2" class="bs-stepper">
+                    <div class="bs-stepper-header" style="display:flex; flex-direction:column; align-items:stretch">
+
+                        <div style="display:flex; flex-direction:row;">
+                            <div class="step" data-target="#stepper1" id="non-printable">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-info-circle"></i></span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#stepper2">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-info-circle"></i></span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#stepper3">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-info-circle"></i></span>
+                                </button>
+                            </div>
+
+                            <div class="line"></div>
+                                <div class="step" data-target="#stepper4">
+                                    <button type="button" class="btn step-trigger">
+                                        <span class="bs-stepper-circle"><i class="fas fa-info-circle"></i></span>
+                                    </button>
+                                </div>
+
+
+
+                        </div> @*Sys*@
+
+                        <button type="button" class="btn btn-outline-primary print">Print</button>
+                        <div class="bs-stepper-content">
+                            <div><i class="fas fa-angle-double-down fa-2x" id="scroll-down"></i></div>
+
+                            <div id="stepper1" class="content">
+                                <div class="text-left main-text form-card">
+                                    <fieldset>
+                                        <span> A Summary of Your Rights Under the Fair Credit Reporting Act</span>
+                                        <hr />
+                                        @await Html.PartialAsync("PartialViews2/_GetStepper2Step1")
+                                        <div id="step1Checkbox">
+                                            @await Html.PartialAsync("PartialViews2/_GetConfirmMessage")
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="operation-btns">
+                                    <button class="btn btn-primary">Previous</button>
+                                    <button class="btn btn-primary" id="step1" disabled>Next</button>
+                                </div>
+                            </div>
+
+                            <div id="stepper2" class="content">
+                                <div class="text-left main-text form-card">
+                                    <fieldset>
+                                        @await Html.PartialAsync("PartialViews2/_GetStepper2Step2")
+
+                                        <div id="step2Checkbox">
+                                            @await Html.PartialAsync("PartialViews2/_GetConfirmMessage")
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="operation-btns">
+                                    <button class="btn btn-primary">Previous</button>
+                                    <button class="btn btn-primary" id="step2" disabled>Next</button>
+                                </div>
+                            </div>
+
+                            <div id="stepper3" class="content">
+                                <div class="text-left main-text form-card">
+                                    <fieldset>
+                                        @await Html.PartialAsync("PartialViews2/_GetStepper2Step3")
+
+                                        <div id="step3Checkbox">
+                                            @await Html.PartialAsync("PartialViews2/_GetConfirmMessage")
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="operation-btns">
+                                    <button class="btn btn-primary">Previous</button>
+                                    <button class="btn btn-primary" id="step3" disabled>Next</button>
+                                </div>
+                            </div>
+
+                            <div id="stepper4" class="content">
+                                <div class="text-left main-text form-card">
+                                    <fieldset>
+                                        <div class="doc-header">
+                                            Consent for Limited Queries of the Federal Motor Carrier Safety Administration (FMCSA)
+                                        </div>
+                                        <div class="doc-header">
+                                            Drug and Alcohol Clearinghouse
+                                        </div>
+                                        <div class="padding-top10 doc-text" style="font-size:small">
+                                            <p>I hereby provide consent to TMS Inc to conduct a limited query of the FMCSA Commercial Driver’s License Drug and Alcohol Clearinghouse to determine whether drug or alcohol violation information about me exists in the Clearinghouse. I understand this consent shall remain on file and shall serve as ongoing consent for TMS Inc to conduct multiple limited queries of the Clearinghouse at any time during my employment or contract period without asking me for additional consent.</p>
+                                            <p>
+                                                I understand that if I refuse to provide consent for TMS Inc to conduct a limited query of the Clearinghouse,TMS Inc is required to prohibit me from performing safety-sensitive functions, including operating a commercial motor vehicle.
+                                            </p>
+                                            <p>
+                                                I understand that if the limited query conducted by TMS Inc indicates that drug or alcohol information exists about me in the Clearinghouse, the FMCSA will not disclose that information to TMS Inc unless I give additional specific consent within the Clearinghouse. However, I understand that TMS Inc will be required to conduct a full query of the Clearinghouse within 24 hours after a limited query indicates that drug or alcohol information exists and that if I do not grant consent within the Clearinghouse for that full query I will be removed from performing safety-sensitive functions, including operating a commercial motor vehicle.
+                                            </p>
+                                        </div>
+
+                                            <div id="step4Checkbox">
+                                                @await Html.PartialAsync("PartialViews2/_GetConfirmMessage")
+                                            </div>
+                                    </fieldset>
+                                </div>
+                                <div class="operation-btns">
+                                    <button class="btn btn-primary">Previous</button>
+                                    <button class="btn btn-primary" id="step4" disabled>Next</button>
+                                </div>
+                            </div>
+
+                            @*sys*@
+                            @*<div><i class="fas fa-angle-double-up" id="scroll-down"></i></div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="~/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="~/plugins/js/stepper2.js"></script>
+
+    <script src="~/plugins/signature-pad/assets/jquery.signaturepad.js"></script>
+    <script src="~/plugins/signature-pad/assets/json2.min.js"></script>
+    <script src="~/plugins/js/signaturePad.js"></script>
+
+    <script>
+        document.addEventListener("change", function (event) {
+            let element = event.target;
+            if (element && element.matches(".form-element-field")) {
+                element.classList[element.value ? "add" : "remove"]("-hasvalue");
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿@model IEnumerable<tms.Models.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="nav-flex">
+        <ul class="nav-buttons">
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="SystemHome" asp-action="GetData" asp-route-sign="-">Previous week</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="SystemHome" asp-action="GetData" asp-route-sign="0" id="home">Current week</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="SystemHome" asp-action="GetData" asp-route-sign="+">Next week</a>
+            </li>
+        </ul>
+    </div>
+<form method="post" asp-action="Index">
+    <div>
+        @foreach (var user in Model)
+        {
+            @if (user.Drivers.Count == 0) { continue; }
+            <table class="tracking" border="1">
+                <tbody>
+                    <tr class="head">
+                        <td class="name" valign="middle">Name</td>
+                        <td class="phone" valign="middle">Phone</td>
+                        <td class="truck" valign="middle">Truck</td>
+                        <td class="trailer" valign="middle">Trailer</td>
+
+                        @foreach (var day in user.Drivers.ElementAt(0).DriverCities)
+                        {
+                            string highlighter = "";
+                            {
+                                highlighter = DateTime.Today.Date == day.Date.Date ? "today" : "";
+                            }
+
+                            <td class="day" id="@highlighter"> <span>@day.Date.DayOfWeek</span> <br /> @day.Date.ToShortDateString() </td>
+
+                        }
+
+                    </tr>
+                    <tr class="user">
+                        <td colspan="12">@user.FirstName  @user.LastName[0]</td>
+                    </tr>
+
+                    @foreach (var driver in user.Drivers)
+                    {
+                        string trailer;
+                        string truck;
+                        {
+                            truck = driver.Truck == null ? "" : driver.Truck.TruckId;
+                            trailer = driver.Trailer == null ? "" : driver.Trailer.TrailerNumber;
+
+                        }
+                        <tr class="value" id="driver">
+                            <td class="driver-id" hidden name="Id">@driver.Id</td>
+                            <td class="value">@driver.Name</td>
+                            <td class="value">@driver.Phone</td>
+                            <td class="value">@truck</td>
+                            <td class="value">@trailer</td>
+
+                            @foreach (var stop in driver.DriverCities)
+                            {
+
+                                string inputContext;
+                                {
+                                    if (stop.AtHome)
+                                    {
+                                        inputContext = ">";
+                                    }
+                                    else { inputContext = stop.City == null ? "" : $"{stop.City.CityName}, {stop.City.State}"; }
+                                }
+                                <td class="day"><input class="city" type="text" value="@inputContext" asp-date="@stop.Date.ToShortDateString()" /></td>
+                            }
+
+                        </tr>
+                    }
+                    @*<tr class="value">
+                            <td valign="middle" colspan="12"><button type="submit">Save all</button></td>
+                        </tr>*@
+                </tbody>
+
+            </table>
+        }
+    </div>
+</form>
+}

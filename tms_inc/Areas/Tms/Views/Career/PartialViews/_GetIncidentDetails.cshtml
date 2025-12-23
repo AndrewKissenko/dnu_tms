@@ -1,0 +1,120 @@
+﻿<legend class="form-legend">
+    Incident Details
+</legend>
+
+<div class="form-element form-input">
+        <input id="violationDate" type="text" class="form-element-field"/>
+        <div class="form-element-bar"></div>
+        <label class="form-element-label" for="violationDate">Violation Date: <span class="required">*</span></label>
+</div>
+
+<div class="form-element form-select">
+    <select id="violationDescription" class="form-element-field">
+        <option value="">None</option>
+        <option value="Careless/Reckless Driving">Careless/Reckless Driving</option>
+        <option value="Driving Without a Licens">Driving Without a License</option>
+        <option value="DUI/OWI">DUI/OWI</option>
+        <option value="Failure to Obey Signal">Failure to Obey Signal</option>
+        <option value="Following Too Closely">Following Too Closely</option>
+        <option value="Improper Lane Change">Improper Lane Change</option>
+        <option value="Seat Belt">Seat Belt</option>
+        <option value="Speeding">Speeding</option>
+        <option value="Too Fast for Conditions">Too Fast for Conditions</option>
+        <option value="Violation Resulting from Accident">Violation Resulting from Accident</option>
+        <option value="Driving with Suspended License">Driving with Suspended License</option>
+        <option value="Failure to Report Accident">Failure to Report Accident</option>
+        <option value="Failure to Yield">Failure to Yield</option>
+        <option value="Improper Passing</">Improper Passing</option>
+        <option value="Improper Turn">Improper Turn</option>
+        <option value="Improper Backing">Improper Backing</option>
+        <option value="No Insurance / Proof of Insurance">No Insurance / Proof of Insurance</option>
+        <option value="Leaving Scene of Accident">Leaving Scene of Accident</option>
+        <option value="Defective Equipment">Defective Equipment</option>
+        <option value="Hazmat Violation">Hazmat Violation</option>
+        <option value="Lane Violation">Lane Violation</option>
+        <option value="Overweight">Overweight</option>
+        <option value="Cell Phone Usage">Cell Phone Usage</option>
+        <option value="Texting While Driving">Texting While Driving</option>
+        <option value="Inattentive Driving">Inattentive Driving</option>
+        <option value="Other">Other</option>
+    </select>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="vialationDescription">Charge / Description: <span class="required">*</span></label>
+</div>
+<div class="form-element form-select">
+    <select id="movingViolationState" class="form-element-field">
+        @await Html.PartialAsync("PartialViews/_GetStateList")
+    </select>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="movingViolationState">State <span class="required">*</span></label>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Were you in a Commercial Vehicle ? <span class="required">*</span> </div>
+    <label class="form-radio-label">
+        <input name=wasInCommercialVehicle class="form-radio-field" type="radio" value="yes" />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=wasInCommercialVehicle class="form-radio-field" type="radio" value="no" />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+<div class="form-checkbox form-checkbox-inline" id="penalties">
+    <div class="form-checkbox-legend">Penalty / Fine (Check all that apply) <span class="required">*</span></div>
+    <label class="form-checkbox-label">
+        <input name=Fine class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>Fine</span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=Suspension class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>Suspension</span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=Revocation class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>Revocation</span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=CommunityService class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>
+            Community Service
+        </span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=Other class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>
+            Other
+        </span>
+    </label>
+</div>
+
+<div class="form-element form-select">
+    <select id="fineAmount" class="form-element-field">
+        <option value="">None</option>
+        <option value="$0 - $99">$0 - $99</option>
+        <option value="100 - $199">$100 - $199</option>
+        <option value="$200 - $299">$200 - $299</option>
+        <option value="$300 - $399">$300 - $399</option>
+        <option value="$400 - $499">$400 - $499</option>
+        <option value="$500+">$500+</option>
+    </select>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="vialationDescription">Fine Amount (if applicable)</label>
+</div>
+
+<div class="form-element form-textarea">
+    <textarea id="movingViolationStateComment" class="form-element-field" placeholder="If you answered OTHER to any question" rows="3"></textarea>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="movingViolationStateComment">Please provide additional detail: <span class="required">*</span></label>
+</div>
+
+
+

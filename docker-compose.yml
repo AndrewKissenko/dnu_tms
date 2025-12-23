@@ -1,0 +1,28 @@
+services:
+ 
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong!Passw0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    restart: always
+
+  tms:
+    build:
+      context: .
+      dockerfile: tms_inc/Dockerfile
+    environment:
+      ASPNETCORE_URLS: "https://0.0.0.0:61616"
+    ports:
+      - "61616:61616"
+    depends_on:
+     - mssql
+
+
+volumes:
+  mssql-data:

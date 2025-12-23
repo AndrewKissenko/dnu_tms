@@ -1,0 +1,17 @@
+﻿@model IEnumerable<tms_inc.Models.Employees.Applicant>
+@{
+    Layout = "_Layout";
+}
+
+    <h3>Applications</h3>
+
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info active" id="pendingApplicants" aria-current="page"><i class="fa fa-spinner" aria-hidden="true"> pending</i></a>
+        <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info" id="processedApplicants"><i class="fa fa-check-square-o" aria-hidden="true"> processed</i></a>
+        <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info" id="deletedApplicants"><i class="fa fa-archive" aria-hidden="true"> deleted</i></a>
+    </nav>
+
+    <div id="result">
+        @await Html.PartialAsync("HireMe/Table", Model)
+
+    </div>

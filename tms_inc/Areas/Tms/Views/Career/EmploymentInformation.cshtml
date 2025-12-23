@@ -1,0 +1,254 @@
+﻿
+
+                    <legend class="form-legend">
+                        Employer/Contract Information
+                    </legend>
+
+                    <div class="form-element form-input">
+                        <input id="employerCompany" class="form-element-field" required  name="employerCompany"/>
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerCompany">Company Name<span class="required">*</span></label>
+                    </div>
+
+                    <div class="form-element form-input">
+                        <input id="enemployementStartDate" type="text" class="form-element-field date" name="enemployementStartDate" />
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="enemployementStartDate">Start date <span class="required">*</span></label>
+                    </div>
+                    <div class="form-element form-input" >
+                        <input id="enemployementEndDate" type="text" class="form-element-field date"  name="enemployementEndDate"/>
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="enemployementEndDate">End Date </label>
+                    </div>
+
+                    <div class="form-element form-input" >
+                        <input id="employerStreetAddress" class="form-element-field" name="employerStreetAddress" />
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerStreetAddress">Street Address</label>
+                    </div>
+
+                    <div class="form-element form-input">
+                        <input id="employerCountry" class="form-element-field" placeholder="e.g USA" required   name="employerCountry"/>
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerCountry">Country <span class="required">*</span></label>
+                    </div>
+
+                    <div class="form-element form-input">
+                        <input id="employerCity" class="form-element-field" placeholder="e.g Chicago"  name="employerCity" required />
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerCity">City <span class="required">*</span></label>
+                    </div>
+
+                    <div class="form-element form-select">
+                        <select id="employerState" class="form-element-field"  name="employerState" >
+                            @await Html.PartialAsync("PartialViews/_GetStateList")
+                        </select>
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerState">State/Province <span class="required">*</span></label>
+                    </div>
+
+                    <div class="form-element form-input">
+                        <input id="employerZip" class="form-element-field" name="employerZip"/>
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerZip">Zip/Postal</label>
+                    </div>
+
+                    <div class="form-element form-input">
+                        <input id="employerTelephone" class="form-element-field" name="employerTelephone"/>
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employerTelephone">Telephone</label>
+                    </div>
+
+                    <div class="form-element form-input">
+                        <input id="employmentPosition" class="form-element-field" placeholder="e.g Driver" name="employmentPosition" />
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employmentPosition">
+                            Position Held
+                        </label>
+                    </div>
+
+
+                    <div class="form-element form-input">
+                        <input id="employmentLeavingReason" class="form-element-field" placeholder="e.g Better compensation" name="employmentLeavingReason" required />
+                        <div class="form-element-bar"></div>
+                        <label class="form-element-label" for="employmentLeavingReason">Reason for leaving? <span class="required">*</span></label>
+                    </div>
+
+
+                    <div class="form-radio form-radio-inline">
+                        <div class="form-radio-legend">Were you terminated/discharged/laid off? <span class="required">*</span> </div>
+                        <label class="form-radio-label">
+                            <input name=employmentTermination class="form-radio-field" type="radio" value="yes" required />
+                            <i class="form-radio-button"></i>
+                            <span>Yes</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input name=employmentTermination class="form-radio-field" type="radio" value="no" required checked />
+                            <i class="form-radio-button"></i>
+                            <span>No</span>
+                        </label>
+                        <div id="employmentTerminationDetailShow" class="hide padding-15">
+                            <div class="form-element form-textarea">
+                                <textarea id="employmentTerminationDetail" class="form-element-field" name="employmentTerminationDetail"></textarea>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="employmentTerminationDetail"><span>Please Explain</span><span class="required">*</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-radio form-radio-inline">
+                        <div class="form-radio-legend">Is this your current employer? <span class="required">*</span> </div>
+                        <label class="form-radio-label">
+                            <input name=isCurrentEmpoyer class="form-radio-field" type="radio" value="yes" required />
+                            <i class="form-radio-button"></i>
+                            <span>Yes</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input name=isCurrentEmpoyer class="form-radio-field" type="radio" value="no" required />
+                            <i class="form-radio-button"></i>
+                            <span>No</span>
+                        </label>
+                    </div>
+
+                    <div class="form-radio form-radio-inline">
+                        <div class="form-radio-legend">May we contact this employer at this time? <span class="required">*</span> </div>
+                        <label class="form-radio-label">
+                            <input name=canContactEmpoyer class="form-radio-field" type="radio" value="yes" required />
+                            <i class="form-radio-button"></i>
+                            <span>Yes</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input name=canContactEmpoyer class="form-radio-field" type="radio" value="no" required />
+                            <i class="form-radio-button"></i>
+                            <span>No</span>
+                        </label>
+                    </div>
+
+
+                    <div class="form-radio form-radio-inline">
+                        <div class="form-radio-legend">Did you operate a commercial motor vehicle? <span class="required">*</span> </div>
+                        <label class="form-radio-label">
+                            <input name=didOperateCommercialVehicle class="form-radio-field" type="radio" value="yes" required />
+                            <i class="form-radio-button"></i>
+                            <span>Yes</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input name=didOperateCommercialVehicle class="form-radio-field" type="radio" value="no" required checked />
+                            <i class="form-radio-button"></i>
+                            <span>No</span>
+                        </label>
+                        <div id="didOperateCommercialVehicleShow" class="hide padding-15">
+                            <div class="form-radio form-radio-inline">
+                                <div class="form-radio-legend">Were you subject to the Federal Motor Carrier or Transport Canada Safety Regulations while employed/contracted by this employer/contractor? <span class="required">*</span> </div>
+                                <label class="form-radio-label">
+                                    <input name=fmcSubject class="form-radio-field" type="radio" value="yes"/>
+                                    <i class="form-radio-button"></i>
+                                    <span>Yes</span>
+                                </label>
+                                <label class="form-radio-label">
+                                    <input name=fmcSubject class="form-radio-field" type="radio" value="no"  />
+                                    <i class="form-radio-button"></i>
+                                    <span>No</span>
+                                </label>
+                            </div>
+                            <div class="form-radio form-radio-inline">
+                                <div class="form-radio-legend">Did you perform any safety sensitive functions in this job, regulated by DOT, and subject to drug and alcohol testing? <span class="required">*</span> </div>
+                                <label class="form-radio-label">
+                                    <input name=didPerformSafetyFunctions class="form-radio-field" type="radio" value="yes" />
+                                    <i class="form-radio-button"></i>
+                                    <span>Yes</span>
+                                </label>
+                                <label class="form-radio-label">
+                                    <input name=didPerformSafetyFunctions class="form-radio-field" type="radio" value="no" />
+                                    <i class="form-radio-button"></i>
+                                    <span>No</span>
+                                </label>
+                            </div>
+
+                            <div class="form-element form-input">
+                                <input id="areasDriven" class="form-element-field" name="areasDriven"/>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="areasDriven">Areas Driven</label>
+                            </div>
+
+                            <div class="form-element form-select">
+                                <select id="milesDrivenWeekly" class="form-element-field" name="milesDrivenWeekly">
+                                    <option value=""></option>
+                                    <option value="0-500">0-500</option>
+                                    <option value="500-1000">500-1000</option>
+                                    <option value="1000-1500">1000-1500</option>
+                                    <option value="1500-2000">1500-2000</option>
+                                    <option value="2000-2500">2000-2500</option>
+                                    <option value="2500-3000">2500-3000</option>
+                                    <option value="3000-3500">3000-3500</option>
+                                    <option value="3500+">3500+</option>
+                                </select>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="milesDrivenWeekly">Miles driven weekly</label>
+                            </div>
+
+                            <div class="form-element form-input">
+                                <input id="payRange" class="form-element-field" name="payRange"/>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="payRange">Pay Range(cents/mile)</label>
+                            </div>
+                            <div class="form-element form-select">
+                                <select id="mostCommonTruckDriven" class="form-element-field" name="mostCommonTruckDriven">
+                                    <option value=""></option>
+                                    <option value="Tanker">Tanker</option>
+                                    <option value="Bus - Straight">Bus - Straight</option>
+                                    <option value="Bus - Articulated">Bus - Articulated</option>
+                                    <option value="Cabover Tractor">Cabover Tractor</option>
+                                    <option value="Class B Vehicle">Class B Vehicle</option>
+                                    <option value="Conventional Tractor">Conventional Tractor</option>
+                                    <option value="Tractor-Trailer">Tractor-Trailer</option>
+                                    <option value="Day Cab">Day Cab</option>
+                                    <option value="Day Cab Conventional">Day Cab Conventional</option>
+                                    <option value="Dump Truck">Dump Truck</option>
+                                    <option value="LC Truck">LC Truck</option>
+                                    <option value="Straight Truck">Straight Truck</option>
+                                    <option value="Yard Horse">Yard Horse</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="mostCommonTruckDriven">Most common truck driven</label>
+                            </div>
+                            <div class="form-element form-select">
+                                <select id="mostCommonTrailer" class="form-element-field" name="mostCommonTrailer">
+                                    <option value=""></option>
+                                    <option value="Flatbed">Flatbed</option>
+                                    <option value="Van">Van</option>
+                                    <option value="Container">Container</option>
+                                    <option value="Doubles">Doubles</option>
+                                    <option value="Liftgate">Liftgate</option>
+                                    <option value="Reefer Trailer">Reefer Trailer</option>
+                                    <option value="Tank Trailer">Tank Trailer</option>
+                                    <option value="Step Deck">Step Deck</option>
+                                    <option value="RGN">RGN</option>
+                                    <option value="Car Hauler">Car Hauler</option>
+                                    <option value="Log Trailer">Log Trailer</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="mostCommonTrailer">Most common trailer</label>
+                            </div>
+                            <div class="form-element form-select">
+                                <select id="trailerLength" class="form-element-field" name="trailerLength">
+                                    <option value=""></option>
+                                    <option value="31 feet or less">31 feet or less</option>
+                                    <option value="32 to 44 feet">32 to 44 feet</option>
+                                    <option value="45 to 52 feet">45 to 52 feet</option>
+                                    <option value="53 feet or more">53 feet or more</option>
+                                    <option value="Other">Trailer length</option>
+                                </select>
+                                <div class="form-element-bar"></div>
+                                <label class="form-element-label" for="trailerLength">Miles driven weekly</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="employerInfo">
+                        <button id="cancelEmployerInfo">Cancel</button>
+                        <button type="button" id="saveEmployerInfo">Save</button>
+                    </div>

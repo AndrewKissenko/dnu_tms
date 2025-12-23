@@ -1,0 +1,75 @@
+﻿
+@{ Layout = null; }
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="~/plugins/css/application.css">
+    <link href="~/plugins/signature-pad/assets/jquery.signaturepad.css" rel="stylesheet">
+    <title>Driver's application form</title>
+</head>
+<body>
+
+
+
+    <button id="btn"></button>
+    <button id="btn2"></button>
+
+    <div class="text-left main-text form-card"  style="padding: 50px">
+        <div>
+            <fieldset>
+                <div id="here">
+
+                </div>
+                <div class="sigPad">
+                    <p class="drawItDesc">Drawn signature</p>
+                    <div>
+                        <div class="typed"></div>
+                        <canvas class="pad"></canvas>
+                        <input type="hidden" name="output" class="output">
+                    </div>
+
+                </div>
+            </fieldset>
+           
+        </div>
+    </div>
+
+
+    @*sys*@
+
+
+    <script src="~/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="~/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="~/plugins/js/stepper.js"></script>
+
+    <script src="~/plugins/signature-pad/assets/jquery.signaturepad.js"></script>
+    <script src="~/plugins/signature-pad/assets/json2.min.js"></script>
+    <script src="~/plugins/js/signaturePad.js"></script>
+
+    <script>
+
+
+        $("#btn").click(function () {
+            $.get("GetString", function (data) {
+                $("#here").html(data);
+               
+            });
+
+
+        })
+
+        var sig = [{ "lx": 33, "ly": 82, "mx": 33, "my": 81 }, { "lx": 33, "ly": 80, "mx": 33, "my": 82 }, { "lx": 33, "ly": 79, "mx": 33, "my": 80 }, { "lx": 36, "ly": 77, "mx": 33, "my": 79 }, { "lx": 37, "ly": 74, "mx": 36, "my": 77 }, { "lx": 39, "ly": 72, "mx": 37, "my": 74 }, { "lx": 41, "ly": 70, "mx": 39, "my": 72 }, { "lx": 45, "ly": 66, "mx": 41, "my": 70 }, { "lx": 47, "ly": 65, "mx": 45, "my": 66 }, { "lx": 50, "ly": 62, "mx": 47, "my": 65 }, { "lx": 55, "ly": 58, "mx": 50, "my": 62 }, { "lx": 58, "ly": 55, "mx": 55, "my": 58 }, { "lx": 62, "ly": 52, "mx": 58, "my": 55 }, { "lx": 65, "ly": 50, "mx": 62, "my": 52 }, { "lx": 69, "ly": 47, "mx": 65, "my": 50 }, { "lx": 71, "ly": 46, "mx": 69, "my": 47 }, { "lx": 73, "ly": 45, "mx": 71, "my": 46 }, { "lx": 74, "ly": 42, "mx": 73, "my": 45 }, { "lx": 74, "ly": 45, "mx": 74, "my": 42 }, { "lx": 74, "ly": 49, "mx": 74, "my": 45 }, { "lx": 74, "ly": 52, "mx": 74, "my": 49 }, { "lx": 73, "ly": 55, "mx": 74, "my": 52 }, { "lx": 73, "ly": 59, "mx": 73, "my": 55 }, { "lx": 70, "ly": 64, "mx": 73, "my": 59 }, { "lx": 69, "ly": 70, "mx": 70, "my": 64 }, { "lx": 67, "ly": 75, "mx": 69, "my": 70 }, { "lx": 64, "ly": 82, "mx": 67, "my": 75 }, { "lx": 61, "ly": 87, "mx": 64, "my": 82 }, { "lx": 57, "ly": 94, "mx": 61, "my": 87 }, { "lx": 53, "ly": 98, "mx": 57, "my": 94 }, { "lx": 49, "ly": 103, "mx": 53, "my": 98 }, { "lx": 46, "ly": 107, "mx": 49, "my": 103 }, { "lx": 44, "ly": 110, "mx": 46, "my": 107 }, { "lx": 41, "ly": 111, "mx": 44, "my": 110 }, { "lx": 41, "ly": 113, "mx": 41, "my": 111 }, { "lx": 41, "ly": 114, "mx": 41, "my": 113 }, { "lx": 40, "ly": 114, "mx": 41, "my": 114 }, { "lx": 39, "ly": 114, "mx": 40, "my": 114 }, { "lx": 38, "ly": 114, "mx": 39, "my": 114 }, { "lx": 37, "ly": 113, "mx": 38, "my": 114 }, { "lx": 37, "ly": 112, "mx": 37, "my": 113 }, { "lx": 37, "ly": 111, "mx": 37, "my": 112 }, { "lx": 36, "ly": 110, "mx": 37, "my": 111 }, { "lx": 37, "ly": 110, "mx": 36, "my": 110 }, { "lx": 87, "ly": 59, "mx": 87, "my": 58 }, { "lx": 87, "ly": 57, "mx": 87, "my": 59 }, { "lx": 87, "ly": 56, "mx": 87, "my": 57 }, { "lx": 87, "ly": 58, "mx": 87, "my": 56 }, { "lx": 87, "ly": 61, "mx": 87, "my": 58 }, { "lx": 87, "ly": 64, "mx": 87, "my": 61 }, { "lx": 87, "ly": 67, "mx": 87, "my": 64 }, { "lx": 86, "ly": 70, "mx": 87, "my": 67 }, { "lx": 86, "ly": 74, "mx": 86, "my": 70 }, { "lx": 84, "ly": 79, "mx": 86, "my": 74 }, { "lx": 83, "ly": 83, "mx": 84, "my": 79 }, { "lx": 81, "ly": 88, "mx": 83, "my": 83 }, { "lx": 77, "ly": 93, "mx": 81, "my": 88 }, { "lx": 77, "ly": 94, "mx": 77, "my": 93 }, { "lx": 73, "ly": 98, "mx": 77, "my": 94 }, { "lx": 72, "ly": 100, "mx": 73, "my": 98 }, { "lx": 71, "ly": 101, "mx": 72, "my": 100 }, { "lx": 69, "ly": 101, "mx": 71, "my": 101 }, { "lx": 69, "ly": 102, "mx": 69, "my": 101 }, { "lx": 68, "ly": 102, "mx": 69, "my": 102 }, { "lx": 67, "ly": 102, "mx": 68, "my": 102 }, { "lx": 66, "ly": 102, "mx": 67, "my": 102 }, { "lx": 66, "ly": 101, "mx": 66, "my": 102 }, { "lx": 65, "ly": 101, "mx": 66, "my": 101 }, { "lx": 65, "ly": 100, "mx": 65, "my": 101 }, { "lx": 65, "ly": 99, "mx": 65, "my": 100 }, { "lx": 66, "ly": 99, "mx": 65, "my": 99 }, { "lx": 67, "ly": 99, "mx": 66, "my": 99 }, { "lx": 68, "ly": 99, "mx": 67, "my": 99 }, { "lx": 69, "ly": 101, "mx": 68, "my": 99 }, { "lx": 71, "ly": 102, "mx": 69, "my": 101 }, { "lx": 73, "ly": 103, "mx": 71, "my": 102 }, { "lx": 73, "ly": 104, "mx": 73, "my": 103 }, { "lx": 74, "ly": 105, "mx": 73, "my": 104 }, { "lx": 75, "ly": 106, "mx": 74, "my": 105 }, { "lx": 76, "ly": 107, "mx": 75, "my": 106 }, { "lx": 77, "ly": 108, "mx": 76, "my": 107 }, { "lx": 78, "ly": 108, "mx": 77, "my": 108 }, { "lx": 78, "ly": 109, "mx": 78, "my": 108 }, { "lx": 79, "ly": 109, "mx": 78, "my": 109 }, { "lx": 80, "ly": 109, "mx": 79, "my": 109 }, { "lx": 81, "ly": 109, "mx": 80, "my": 109 }, { "lx": 83, "ly": 108, "mx": 81, "my": 109 }, { "lx": 84, "ly": 107, "mx": 83, "my": 108 }, { "lx": 86, "ly": 106, "mx": 84, "my": 107 }, { "lx": 88, "ly": 105, "mx": 86, "my": 106 }, { "lx": 91, "ly": 102, "mx": 88, "my": 105 }, { "lx": 93, "ly": 100, "mx": 91, "my": 102 }, { "lx": 97, "ly": 96, "mx": 93, "my": 100 }, { "lx": 100, "ly": 93, "mx": 97, "my": 96 }, { "lx": 102, "ly": 90, "mx": 100, "my": 93 }, { "lx": 105, "ly": 86, "mx": 102, "my": 90 }, { "lx": 107, "ly": 82, "mx": 105, "my": 86 }, { "lx": 108, "ly": 79, "mx": 107, "my": 82 }, { "lx": 109, "ly": 76, "mx": 108, "my": 79 }, { "lx": 110, "ly": 74, "mx": 109, "my": 76 }, { "lx": 111, "ly": 71, "mx": 110, "my": 74 }, { "lx": 111, "ly": 69, "mx": 111, "my": 71 }, { "lx": 111, "ly": 66, "mx": 111, "my": 69 }, { "lx": 111, "ly": 64, "mx": 111, "my": 66 }, { "lx": 111, "ly": 62, "mx": 111, "my": 64 }, { "lx": 111, "ly": 60, "mx": 111, "my": 62 }, { "lx": 110, "ly": 58, "mx": 111, "my": 60 }, { "lx": 110, "ly": 56, "mx": 110, "my": 58 }, { "lx": 109, "ly": 54, "mx": 110, "my": 56 }, { "lx": 109, "ly": 58, "mx": 109, "my": 54 }, { "lx": 109, "ly": 62, "mx": 109, "my": 58 }, { "lx": 109, "ly": 65, "mx": 109, "my": 62 }, { "lx": 109, "ly": 69, "mx": 109, "my": 65 }, { "lx": 109, "ly": 74, "mx": 109, "my": 69 }, { "lx": 108, "ly": 80, "mx": 109, "my": 74 }, { "lx": 107, "ly": 87, "mx": 108, "my": 80 }, { "lx": 106, "ly": 91, "mx": 107, "my": 87 }, { "lx": 103, "ly": 97, "mx": 106, "my": 91 }, { "lx": 101, "ly": 102, "mx": 103, "my": 97 }, { "lx": 99, "ly": 106, "mx": 101, "my": 102 }, { "lx": 97, "ly": 110, "mx": 99, "my": 106 }, { "lx": 94, "ly": 114, "mx": 97, "my": 110 }, { "lx": 93, "ly": 117, "mx": 94, "my": 114 }, { "lx": 91, "ly": 119, "mx": 93, "my": 117 }, { "lx": 90, "ly": 119, "mx": 91, "my": 119 }, { "lx": 90, "ly": 121, "mx": 90, "my": 119 }, { "lx": 89, "ly": 121, "mx": 90, "my": 121 }, { "lx": 88, "ly": 118, "mx": 89, "my": 121 }, { "lx": 87, "ly": 114, "mx": 88, "my": 118 }, { "lx": 87, "ly": 112, "mx": 87, "my": 114 }, { "lx": 86, "ly": 108, "mx": 87, "my": 112 }, { "lx": 85, "ly": 104, "mx": 86, "my": 108 }, { "lx": 85, "ly": 101, "mx": 85, "my": 104 }, { "lx": 85, "ly": 97, "mx": 85, "my": 101 }, { "lx": 85, "ly": 94, "mx": 85, "my": 97 }, { "lx": 84, "ly": 91, "mx": 85, "my": 94 }, { "lx": 84, "ly": 88, "mx": 84, "my": 91 }, { "lx": 84, "ly": 86, "mx": 84, "my": 88 }, { "lx": 84, "ly": 85, "mx": 84, "my": 86 }, { "lx": 84, "ly": 84, "mx": 84, "my": 85 }, { "lx": 86, "ly": 84, "mx": 84, "my": 84 }, { "lx": 89, "ly": 84, "mx": 86, "my": 84 }, { "lx": 93, "ly": 85, "mx": 89, "my": 84 }, { "lx": 96, "ly": 85, "mx": 93, "my": 85 }, { "lx": 97, "ly": 85, "mx": 96, "my": 85 }, { "lx": 102, "ly": 86, "mx": 97, "my": 85 }, { "lx": 106, "ly": 86, "mx": 102, "my": 86 }, { "lx": 109, "ly": 87, "mx": 106, "my": 86 }, { "lx": 112, "ly": 89, "mx": 109, "my": 87 }, { "lx": 113, "ly": 90, "mx": 112, "my": 89 }, { "lx": 115, "ly": 90, "mx": 113, "my": 90 }, { "lx": 117, "ly": 92, "mx": 115, "my": 90 }, { "lx": 118, "ly": 93, "mx": 117, "my": 92 }, { "lx": 118, "ly": 94, "mx": 118, "my": 93 }, { "lx": 120, "ly": 97, "mx": 118, "my": 94 }, { "lx": 121, "ly": 99, "mx": 120, "my": 97 }, { "lx": 121, "ly": 101, "mx": 121, "my": 99 }, { "lx": 121, "ly": 102, "mx": 121, "my": 101 }, { "lx": 121, "ly": 104, "mx": 121, "my": 102 }, { "lx": 121, "ly": 105, "mx": 121, "my": 104 }, { "lx": 121, "ly": 106, "mx": 121, "my": 105 }, { "lx": 121, "ly": 105, "mx": 121, "my": 106 }]
+        $('.sigPad').signaturePad({
+            displayOnly: true
+        }).regenerate(sig);
+                // signature data
+
+
+    </script>
+</body>
+</html>

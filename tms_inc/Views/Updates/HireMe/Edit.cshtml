@@ -1,0 +1,61 @@
+﻿@model tms_inc.Models.Employees.Applicant
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+<h2>Edit</h2>
+
+<h4>Applicant</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input asp-for="ApplicantFirstName" class="form-control" />
+                <span asp-validation-for="ApplicantFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Second Name</label>
+                <input asp-for="ApplicantSecondName" class="form-control" />
+                <span asp-validation-for="ApplicantSecondName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Application Status</label> <br />
+                <div class="form-control">
+                    @Html.DropDownListFor(model => model.Status, ViewBag.Statuses as SelectList)
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsProcessed" /> @Html.DisplayNameFor(model => model.IsProcessed)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" asp-action="EditApplicant" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="_GetActiveApplications">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+        }

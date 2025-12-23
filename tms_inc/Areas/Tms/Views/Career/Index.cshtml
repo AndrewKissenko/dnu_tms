@@ -1,0 +1,95 @@
+﻿@model IEnumerable<tms_inc.Models.Position.Position>
+<section class="inner-banner">
+    <div class="thm-container">
+        <h2>Career</h2>
+        <ul class="breadcumb">
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> Home</a></li>
+            <li><span>Career</span></li>
+        </ul>
+    </div>
+</section>
+
+<section class="sec-padding  faq-page career-page">
+    <div class="thm-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="caption-box">
+                    <div class="content-box sec-title">
+                        <h2><span>career</span></h2>
+                        <p>We are recruiting – apply now to join our friendly team</p>
+                    </div>
+                    <div class="img-box career-pic">
+                        <img src=""/>
+                    </div>
+                </div>
+                <div class="sec-title margin-top100">
+                    <h2><span>open positions</span></h2>
+                </div>
+                @foreach (var position in Model)
+                {
+                <div class="accrodion-grp" data-grp-name="faq-accrodion">
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4><span>@position.PositionName</span> <span class="padding-righ10"> @position.Location</span> </h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <div class="single-job-details">
+                                <h2>Job responsibilities</h2>
+                                <p>@position.JobResponsibilityIntro</p>
+                                <ul class="list-item">
+                                    @{ 
+                                        var responsibilities = new string[20];
+                                        if(!string.IsNullOrEmpty(position.JobResponsibilitiesString) && position.JobResponsibilitiesString.Contains("."))
+                                        {
+                                            responsibilities = position.JobResponsibilitiesString.Split('.', StringSplitOptions.RemoveEmptyEntries);
+                                        }
+                                        else if(!string.IsNullOrEmpty(position.JobResponsibilitiesString) && position.JobResponsibilitiesString.Contains(","))
+                                        {
+                                            responsibilities = position.JobResponsibilitiesString.Split(',', StringSplitOptions.RemoveEmptyEntries);
+                                        }
+                                        else
+                                        {
+                                            if(!string.IsNullOrEmpty(position.JobResponsibilitiesString)) 
+                                            {
+                                                responsibilities = position.JobResponsibilitiesString.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                                            }
+
+                                        }
+
+
+}
+                                    @if (!string.IsNullOrEmpty(responsibilities[0]))
+                                    {
+                                    @foreach (var responsibility in responsibilities)
+                                    {
+                                        <li>@responsibility</li>
+                                    }
+                                    }
+                                </ul>
+                            </div>
+                            @{ 
+                                var link = "";
+                                if (position.PositionType == tms_inc.Models.Position.PositionType.Driver)
+                                {
+                                    link = Url.Action("DriverApplication2", "Career");
+                                }
+                                else
+                                {
+                                    link = Url.Action("OtherApplication", "Career");
+                                }
+                            }
+                            <div class="download-app-box clearfix">
+
+                                <div class="btn-box pull-right">
+                                    <a href="@link" class="thm-btn">Apply <i class="fa fa-upload" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

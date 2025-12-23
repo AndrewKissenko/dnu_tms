@@ -1,0 +1,102 @@
+﻿@model List<List<MailTableVM>>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-3 tempate-input">
+                <fieldset>
+                    <legend>Template</legend>
+
+                    <p>
+                        Help: <br />
+                        @("<br />") - next line<br />
+                        @("<b>") Text @("</b>") - bold font
+                    </p>
+
+                    <p>
+                        <label>Subject :</label><br />
+                        <textarea name="subject" id="subjectInput">Available Trucks: </textarea>
+                    </p>
+                    <p>
+                        <label>Body :</label> <br />
+                        @{
+                            string body = "<h6> Hello, Truck list for today</h4>";
+                        }
+                        <textarea name="body" id="bodyInput">@(" Hello,")<br />@("Truck list for today") </textarea>
+                    </p>
+
+                    <p>
+                        <label>Signature :</label><br />
+                        @{
+                            string footer = "<p> Please reply or call <br /> Paul K.<br /><b>email@example.net</b> <br/><b> 773 - 123- 4567</b><br /><br />Thank you and have a nice day! </p> ";
+                        }
+                        <textarea name="footer" id="footerInput"> @footer</textarea>
+                    </p>
+                </fieldset>
+            </div>
+            <div class="col-9" style="">
+                <fieldset>
+                    <legend>Email Preview</legend>
+  
+                        <b>Subject: </b>
+                        <div id="subject"></div>
+                        <hr />
+                        <div id="body" style="background: #EEEEEE;"></div>
+                        <div id="truck-list">
+                            @foreach (var collection in Model)
+                            {
+                                <div style="background-color: #000000; border: 1px solid #000000; color: #FFFFFF; font-weight: bold; margin-top: 25px; text-align: left; padding-left: 20px;">
+                                    @collection[0].UserName @collection[0].UserName2[0]
+                                </div>
+                                <table width="100%" style="border: 1px solid;border-collapse: collapse;border-spacing: 0;">
+                                    <thead>
+                                        <tr style=" background-color: #E9E9E9; border-top: 1px solid #000000; font-weight: bold; padding: 5px 0; ">
+                                            <th valign="middle" style=" display: table-cell; vertical-align: inherit; font-weight: bold; text-align:center">Truck</th>
+                                            <th valign="middle" style=" display: table-cell; vertical-align: inherit; font-weight: bold; text-align:center">@DateTime.Now.Date.ToShortDateString()</th>
+                                            <th valign="middle" style=" display: table-cell; vertical-align: inherit; font-weight: bold; text-align:center">Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style=" display: table-row-group; vertical-align: middle; margin-bottom:25px">
+                                        @foreach (var item in collection)
+                                        {
+                                            <tr style=" background-color: #FFFFFF;">
+                                                <td style="width: 100px; text-align:center; border: 1px solid black;" valign="middle"> @item.Truck</td>
+                                                <td style="width: 100px; text-align:center; border: 1px solid black;" valign="middle">@item.CityName, @item.CityState</td>
+                                                <td style="width: 100px; text-align:center; border: 1px solid black;" valign="middle">@item.Comment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            }
+                        </div>
+                        <div style="margin-top:25px" id="footer"></div>
+                        <hr>
+                        <button id="send-email" type="submit"> Send all </button>
+                    
+                </fieldset>
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+
+                $("#send-email").click(function () {
+                    mailToSend = {
+                        subject: $("#subject").html(),
+                        body: $("#body").html() + $("#truck-list").html(),
+                        footer: $("#footer").html()
+                    }
+                    $(this).css("background-color", "blue");
+                    let self = $(this);
+
+                    $.post('@Url.Action("SendMail", "Mail")', { emailData: mailToSend }, function (res) {
+                        self.css("background-color", "black")
+                        alert(res);
+                    });
+                });
+            });
+        </script>
+    </div>
+                            }

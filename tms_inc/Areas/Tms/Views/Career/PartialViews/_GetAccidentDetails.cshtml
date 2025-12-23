@@ -1,0 +1,125 @@
+﻿<legend class="form-legend">
+    Accident Details
+</legend>
+<hr />
+<span class="font-italic">
+    Please enter detailed information about this accident below, whether the accident was chargeable, recordable, reportable, or your fault:
+</span>
+
+<div class="form-element form-input">
+    <input id="accidentDate" type="text" class="form-element-field" />
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="accidentDate">Date of Accident / Incident <span class="required">*</span></label>
+</div>
+
+<div class="form-element form-select">
+    <select id="accidentType" class="form-element-field">
+        <option value="">None</option>
+        <option value="Non-Injury">Non-Injury</option>
+        <option value="Injury">Injury</option>
+        <option value="Fatality">Fatality</option>
+    </select>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="accidentType">Type of Accident / Incident <span class="required">*</span></label>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Hazmat Accident / Incident</div>
+    <label class="form-radio-label">
+        <input name=isHazmat class="form-radio-field" type="radio" value="yes" />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=isHazmat class="form-radio-field" type="radio" value="no"  />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Was the vehicle towed away?</div>
+    <label class="form-radio-label">
+        <input name=isVehicleTowedAway class="form-radio-field" type="radio" value="yes" />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=isVehicleTowedAway class="form-radio-field" type="radio" value="no"  />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+<div class="form-element form-input">
+    <input id="accidentCity" class="form-element-field" placeholder="Chicago" />
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="city">City</label>
+</div>
+
+<div class="form-element form-select">
+    <select id="accidentState" class="form-element-field">
+        @await Html.PartialAsync("PartialViews/_GetStateList")
+    </select>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="state">State <span class="required">*</span></label>
+</div>
+
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Were you in a Commercial Vehicle ? <span class="required">*</span> </div>
+    <label class="form-radio-label">
+        <input name=inCommercialVehicle class="form-radio-field" type="radio" value="yes"/>
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=inCommercialVehicle class="form-radio-field" type="radio" value="no" />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+    <div id="departmentOfTransportationRecordableAccident" class="hide padding-15">
+        <div class="form-radio-legend">If yes, was this a Department of Transportation recordable accident ? <span class="required">*</span> </div>
+        <label class="form-radio-label">
+            <input name=wasDepartmentOfTransportationRecordableAccident class="form-radio-field" type="radio" value="yes" />
+            <i class="form-radio-button"></i>
+            <span>Yes</span>
+        </label>
+        <label class="form-radio-label">
+            <input name=wasDepartmentOfTransportationRecordableAccident class="form-radio-field" type="radio" value="no" />
+            <i class="form-radio-button"></i>
+            <span>No</span>
+        </label>
+    </div>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Were you at fault ?<span class="required">*</span></div>
+    <label class="form-radio-label">
+        <input name=wereAtFault class="form-radio-field" type="radio" value="yes" />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=wereAtFault class="form-radio-field" type="radio" value="no" />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Were you ticketed ?<span class="required">*</span></div>
+    <label class="form-radio-label">
+        <input name=isTicketed class="form-radio-field" type="radio" value="yes" />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=isTicketed class="form-radio-field" type="radio" value="no"  />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+
+

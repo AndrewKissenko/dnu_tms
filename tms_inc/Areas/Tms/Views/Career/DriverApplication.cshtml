@@ -1,0 +1,1152 @@
+﻿
+@{ Layout = null; }
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="~/plugins/css/application.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <link href="~/plugins/signature-pad/assets/jquery.signaturepad.css" rel="stylesheet">
+    <title>Driver's application form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-address">
+            <div>
+                <img src="~/images/logo-new.png" id="logo" alt="Logo" />
+            </div>
+            <div class="address">
+                <div class="compnany-name">TMS Inc.</div>
+                <div>773-964-3462</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h2>Driver's application form</h2>
+                <div id="stepper1" class="bs-stepper">
+                    <div class="bs-stepper-header" style="display:flex; flex-direction:column; align-items:stretch">
+                        <div style="display:flex; flex-direction:row;">
+                            <div class="step" data-target="#test-l-1">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-door-open"></i></span>
+                                </button>
+                            </div>
+
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-3">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-id-card"></i></span>
+
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-4">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-building"></i></span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-5">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-id-badge"></i></span>
+
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-6">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-school"></i></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div style="display:flex; flex-direction:row;">
+
+
+                            <div class="step" data-target="#test-l-7">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-user-shield"></i></span>
+                                </button>
+                            </div>
+
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-8">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-truck-moving"></i></span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-9">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-fire-extinguisher"></i></span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-11">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-gavel"></i></span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-10">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle"><i class="fas fa-clipboard-check"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bs-stepper-content">
+                        <div id="test-l-1" class="content">
+                            <p>Welcome</p>
+                            <hr />
+                            <div class="text-left main-text">
+                                <p>
+                                    Thank you for your interest in TMS Inc. To apply for a driving position, please complete our online application for employment. Incomplete information will delay the processing of your application or prevent it from being submitted.
+                                </p>
+                                <p>
+                                    In compliance with Federal and State equal employment opportunity laws, qualified applicants are considered for all positions without regard to race, color, religion, sex, national origin, age, marital status, veteran status, non-job related disability, or any other protected group status.
+                                </p>
+                                <p class="bold">
+                                    To fill out this form, you will need to know the following:
+                                </p>
+                                <div class="terms">
+                                    <div>
+                                        <i class="fas fa-check"></i><span>Social Security Number</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-check"></i><span>Home address history for the past 3 years</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-check"></i><span>Current driver license number and driver license history for the past 3 years</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-check"></i><span>Employment history up to 10 years</span>
+                                    </div>
+                                    <div style="display:flex">
+                                        <i class="fas fa-check"></i><span> History of traffic accidents, violations and/or convictions from the last 3 years (including DUI or reckless driving conviction and license suspension)</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-check"></i><span>Military history (if applicable)</span>
+                                    </div>
+                                </div>
+                                <hr />
+                                <p>Requirements</p>
+                                <p class="text-left main-text">
+                                <p class="bold">
+                                    To qualify with TMS Inc, you must meet the following criteria:
+                                </p>
+                                <div class="terms main-text">
+                                    <dl>
+                                        <dt> <i class="fas fa-check"></i><span>Equipment Guidelines:</span></dt>
+                                        <dd>
+                                            <ul>
+                                                <li>Tractor must pass DOT and company inspection</li>
+                                                <li>
+                                                    Documentation for payment of Heavy Use Tax
+                                                </li>
+                                                <li>(Commercial Driver's License) issued by the state of residence</li>
+                                                <li>Minimum of 2 years recent verifiable over the road tractor trailer driving experience</li>
+                                                <li>Must be at least 23 years old</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt> <i class="fas fa-check"></i><span>No serious or disqualifying traffic violations within the last three years including:</span></dt>
+                                        <dd>
+                                            <ul>
+                                                <li>
+                                                    Excessive speeding of 15 mph over the posted speed limit
+                                                </li>
+                                                <li>
+                                                    Careless/reckless driving violations
+                                                </li>
+                                                <li>
+                                                    Improper or erratic lane changes
+                                                </li>
+                                                <li>
+                                                    Following too close violations
+                                                </li>
+                                                <li>
+                                                    Driving while under the influence (in last 10 years)
+                                                </li>
+                                                <li>
+                                                    Leaving the scene of an accident or failure to report accident violations
+                                                </li>
+                                                <li>
+                                                    No more than 3 moving violations in the past 36 months and no more than two moving violations in the past 12 months
+                                                </li>
+                                                <li>
+                                                    No DOT recordable preventable accidents in involving fatality, bodily injuries treated away from the scene, or disabling damage to a motor vehicle within the past three years
+                                                </li>
+                                                <li>
+                                                    Submit to a background investigation (to include past employment, education, and criminal history) and drug screening required
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="step1">Next</button>
+                        </div>
+
+                        <form id="test-l-3" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-3">
+                                    <fieldset>
+                                        <legend class="form-legend">Personal Information</legend>
+                                        <div class="form-element form-input">
+                                            <input id="firstName" class="form-element-field" placeholder="Please fill in your first name" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="firstName">First Name <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="middleName" class="form-element-field" placeholder="Please fill in your middle name" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="middleName">Middle Name</label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="lastName" class="form-element-field" placeholder="Please fill in your last name" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="lastName">Last Name <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-select suffix">
+                                            <select id="suffix" class="form-element-field">
+                                                <option value="">NONE</option>
+                                                <option value="Jr.">Jr.</option>
+                                                <option value="&#8545;">&#8545;</option>
+                                                <option value="Sr.">Sr.</option>
+                                                <option value="III">&#8546;</option>
+                                                <option value="IV">&#8547;</option>
+                                                <option value="V">&#8548;</option>
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="suffix">Suffix</label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="ssn" class="form-element-field" placeholder="Please fill in your Social Security number" required type="number" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="ssn">SSN / SIN <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input ">
+                                            <input id="birthday" type="text" class="form-element-field" placeholder="Please fill in your Date of Birth"
+                                                   required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="birthday">Date of Birth (mm/dd/yyyy) <span class="required">*</span></label>
+                                        </div>
+                                        Address
+                                        <hr />
+                                        <div class="form-element form-input">
+                                            <input id="streetLine1" class="form-element-field" placeholder="Please fill in your street" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="streetLine1">Current Street Address (line 1) <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="streetLine2" class="form-element-field" placeholder="Please fill in your street" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="streetLine2">Current Street Address (line 2)</label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="country" class="form-element-field" placeholder="Please fill in your country" value="United States" disabled />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="country">Country</label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="city" class="form-element-field" placeholder="Chicago" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="city">City <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-select">
+                                            <select id="state" class="form-element-field" required>
+                                                @await Html.PartialAsync("PartialViews/_GetStateList")
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="state">State/Province <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="zip" class="form-element-field" placeholder="60007" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="zip">Zip/Postal Code <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Residence address for 3 or more years? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=residence class="form-radio-field" type="radio" required value="yes" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=residence class="form-radio-field" type="radio" required value="no" />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+
+                                        Contact
+                                        <hr />
+                                        <span style="font-style:italic">If your cell phone is also your primary phone, enter it in both fields below.</span>
+
+                                        <div class="form-element form-input">
+                                            <input id="primaryPhone" class="form-element-field" placeholder="7739643462" required type="text" maxlength="12" pattern="^[0-9]+$" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="primaryPhone">Primary Phone <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="cellPhone" class="form-element-field" placeholder="7739643462" type="text" maxlength="12" pattern="^[0-9]+$" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="cellPhone">Cell Phone </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="email" class="form-element-field" placeholder="example@net" type="email" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="email">Email <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="emailConfirmation" class="form-element-field" placeholder="example@net" type="email" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="emailConfirmation">
+                                                Confirm Email Address
+                                            </label>
+                                        </div>
+                                        <div class="form-element form-select width40">
+                                            <select id="contactMethod" class="form-element-field">
+                                                <option value="Any">Any</option>
+                                                <option value="Primary Phone">Primary Phone</option>
+                                                <option value="Cell Phone">Cell Phone</option>
+                                                <option value="Email">Email</option>
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="contactMethod">Preferred method of contact</label>
+                                        </div>
+                                        <div class="form-element form-select width40">
+                                            <select id="contactTime" class="form-element-field">
+                                                <option value="Any">Any</option>
+                                                <option value="Morning">Morning</option>
+                                                <option value="Afternoon">Afternoon</option>
+                                                <option value="Night">Night</option>
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="contactTime">Best time to contact you</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step3">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-4" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-4">
+                                    <fieldset>
+                                        <legend class="form-legend">Company Questions</legend>
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Are you legally eligible for employment in the United States? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isEligible class="form-radio-field" type="radio" required value="yes" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isEligible class="form-radio-field" type="radio" required value="no" />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Are you currently employed? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isEmployed class="form-radio-field" type="radio" value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isEmployed class="form-radio-field" type="radio" value="no" />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div class="form-element form-input hide" id="lastEmploymentDayField">
+                                                <input id="lastEmploymentDay" type="text" class="form-element-field" placeholder="Please fill in date" required />
+                                                <div class="form-element-bar"></div>
+                                                <label class="form-element-label" for="lastEmploymentDay">What date did your last employment end ? <span class="required">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Do you read, write, and speak English? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isEnglish class="form-radio-field" type="radio" required value="yes" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isEnglish class="form-radio-field" type="radio" required value="no" />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you ever worked for this company before? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isWorkedBefore class="form-radio-field" type="radio" required value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isWorkedBefore class="form-radio-field" type="radio" required value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Do you have a current TWIC card? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isTWICOwner class="form-radio-field" type="radio" value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isTWICOwner class="form-radio-field" type="radio" value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div id="twicYes" class="form-element form-input hide">
+                                            <input id="twicExpirationDate" type="text" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="twicExpirationDate">Expiration date: <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you ever been known by any other name? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isOtherName class="form-radio-field" type="radio" value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isOtherName class="form-radio-field" type="radio" value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div class="form-element form-input hide" id="otherNameField">
+                                                <input id="otherName" class="form-element-field" />
+                                                <div class="form-element-bar"></div>
+                                                <label class="form-element-label" for="otherName">Enter name: <span class="required">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you completed your registration for the FMCSA Drug & Alcohol Clearinghouse? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isFMCSACompleted class="form-radio-field" type="radio" required value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isFMCSACompleted class="form-radio-field" type="radio" required value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="howFoundInfo" class="form-element-field" placeholder="e.g commercial, the internet etc." />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="howFoundInfo">How did you hear about our company? <span class="required">*</span></label>
+                                        </div>
+
+                                        <div class="form-element form-textarea">
+                                            <textarea id="emergencyContact" class="form-element-field" placeholder="Please fill in contacts to reach in emergency"></textarea>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="emergencyContact">Emergency contacts</label>
+                                        </div>
+
+                                        <div class="form-element form-input ">
+                                            <input id="medicalCardExpirationDate" type="text" class="form-element-field" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="medicalCardExpirationDate">Medical card expiration date (mm/dd/yyyy) <span class="required">*</span></label>
+                                        </div>
+
+                                        <legend class="form-legend">Driving experience</legend>
+                                        <hr />
+                                        <span style="font-style:italic">For each class of equipment, enter type of equipment (van, reefer, tank, etc.), start and end dates, and approximate number of total miles. If no experience in a class, enter "NONE".</span>
+
+                                        <div class="form-element form-textarea">
+                                            <textarea id="straightTruck" class="form-element-field"></textarea>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="straightTruck">Straight truck</label>
+                                        </div>
+
+                                        <div class="form-element form-textarea">
+                                            <textarea id="tractorSemiTreailer" class="form-element-field"></textarea>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="tractorSemiTreailer">Tractor and Semi-Treailer</label>
+                                        </div>
+                                        <div class="form-element form-textarea">
+                                            <textarea id="tractorTwoTrailers" class="form-element-field" required></textarea>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="tractorTwoTrailers">Tractor - Two Trailers <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-textarea">
+                                            <textarea id="other" class="form-element-field"></textarea>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="other">Other</label>
+                                        </div>
+                                        <legend class="form-legend">Equipment (owner/operators only)</legend>
+                                        <br />
+                                        <div>Equipment Description (Tractor):</div>
+
+                                        <div class="form-element form-input">
+                                            <input id="type" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="type">Type: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="year" class="form-element-field" type="number" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="year">Year: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="make" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="make">Make: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="model" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="model">Model: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="color" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="color">Color: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="vin" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="vin">VIN: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="weight" class="form-element-field" type="number" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="weight">Weight: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="mileage" class="form-element-field" type="number" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="mileage">Mileage: </label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="fifthWheelHeight" class="form-element-field" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="fifthWheelHeight">Fifth Wheel Height: </label>
+                                        </div>
+                                        <legend class="form-legend">Education</legend>
+                                        <div class="form-element form-select">
+                                            <select id="highestGradeCompleted" class="form-element-field">
+                                                <option value="NONE">NONE</option>
+                                                <option value="PhD">PhD</option>
+                                                <option value="MBA">MBA</option>
+                                                <option value="MS">MS</option>
+                                                <option value="College - 5+">College - 5+</option>
+                                                <option value="College - 4">College - 4</option>
+                                                <option value="College - 3">College - 3</option>
+                                                <option value="College - 2">College - 2</option>
+                                                <option value="College - 1">College - 1</option>
+                                                <option value="GED">GED</option>
+                                                <option value="Grade 12">Grade 12</option>
+                                                <option value="Grade 11">Grade 11</option>
+                                                <option value="Grade 10">Grade 10</option>
+                                                <option value="Grade 9">Grade 9</option>
+                                                <option value="Grade 8">Grade 8</option>
+                                                <option value="Grade 7">Grade 7</option>
+                                                <option value="Grade 6">Grade 6</option>
+                                                <option value="Grade 5">Grade 5</option>
+                                                <option value="Grade 4">Grade 4</option>
+                                                <option value="Grade 3">Grade 3</option>
+                                                <option value="Grade 2">Grade 2</option>
+                                                <option value="Grade 1">Grade 1</option>
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="highestGradeCompleted">List highest grade completed:</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step4">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-5" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-5">
+                                    <fieldset>
+                                        <legend class="form-legend">
+                                            Licenses
+                                        </legend>
+                                        <div class="form-element form-input">
+                                            <input id="licenseNumber" class="form-element-field" placeholder="Please fill in your license number" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="licenseNumber">License Number <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-select">
+                                            <select id="licenseState" class="form-element-field" required>
+                                                @await Html.PartialAsync("PartialViews/_GetStateList")
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="licenseState">License State/Province <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="licenseExpiration" type="text" class="form-element-field" placeholder="Please fill in your License Expiration" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="licenseExpiration">License Expiration <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="physicalExpiration" type="text" class="form-element-field" placeholder="Please fill in your Physical Expiration" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="physicalExpiration">Physical Expiration </label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Is this your current driver license? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isCurrentDrivingLicense class="form-radio-field" type="radio" required value="yes" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isCurrentDrivingLicense class="form-radio-field" type="radio" required value="no" />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Is this a commercial driver license? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isCommericalDrivingLicense class="form-radio-field" type="radio" required value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isCommericalDrivingLicense class="form-radio-field" type="radio" required value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-element form-select hide" id="licenceClassList">
+                                            <select id="licenseClass" class="form-element-field">
+                                                <option value="Other">Other</option>
+                                                <option value="Class A">Class A</option>
+                                                <option value="Class AZ">Class AZ</option>
+                                                <option value="Class B">Class B</option>
+                                                <option value="Class C">Class C</option>
+                                                <option value="Class D">Class D</option>
+                                                <option value="Class E">Class E</option>
+                                                <option value="Class F">Class F</option>
+                                                <option value="Class O">Class O</option>
+                                                <option value="Class R">Class R</option>
+                                                <option value="Class 1">Class 1</option>
+                                                <option value="Class 2">Class 2</option>
+                                                <option value="Class 3">Class 3</option>
+                                                <option value="Class 4">Class 4</option>
+                                                <option value="Class 5">Class 5</option>
+                                            </select>
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="licenseClass">License Class <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-checkbox form-checkbox-inline" id="endorsements">
+                                            <div class="form-checkbox-legend">Endorsements <span class="required">*</span></div>
+                                            <label class="form-checkbox-label">
+                                                <input name=None class="form-checkbox-field" type="checkbox" />
+                                                <i class="form-checkbox-button"></i>
+                                                <span>None</span>
+                                            </label>
+                                            <label class="form-checkbox-label">
+                                                <input name=Other class="form-checkbox-field" type="checkbox" />
+                                                <i class="form-checkbox-button"></i>
+                                                <span>Other</span>
+                                            </label>
+                                            <label class="form-checkbox-label">
+                                                <input name=Tanker class="form-checkbox-field" type="checkbox" />
+                                                <i class="form-checkbox-button"></i>
+                                                <span>Tanker</span>
+                                            </label>
+                                            <label class="form-checkbox-label">
+                                                <input name=Doubles/Triples class="form-checkbox-field" type="checkbox" />
+                                                <i class="form-checkbox-button"></i>
+                                                <span>
+                                                    Doubles / Triples
+                                                </span>
+                                            </label>
+                                            <label class="form-checkbox-label">
+                                                <input name=XEndorsement class="form-checkbox-field" type="checkbox" />
+                                                <i class="form-checkbox-button"></i>
+                                                <span>
+                                                    X Endorsement
+                                                </span>
+                                            </label>
+                                            <label class="form-checkbox-label">
+                                                <input name=HazMat class="form-checkbox-field" type="checkbox" />
+                                                <i class="form-checkbox-button"></i>
+                                                <span>
+                                                    HazMat
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-element form-input hide" id="hazmat">
+                                            <input id="hazmatExpiration" type="text" class="form-element-field" placeholder="Please fill in your License Expiration" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="hazmatExpiration">License Expiration <span class="required">*</span></label>
+                                        </div>
+
+                                        @await Html.PartialAsync("PartialViews/_GetMotorVehicleRecord")
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step5">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-6" class="content" name="activity">
+                            <div class="text-left main-text form-card">
+                                <div id="step-6">
+                                    <fieldset>
+                                        <legend class="form-legend">
+                                            Army / Driver Training School / School / Employment Information
+                                        </legend>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Were you ever in the U.S military ? </div>
+                                            <label class="form-radio-label">
+                                                <input name=isMilitary class="form-radio-field" type="radio" value="Yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isMilitary class="form-radio-field" type="radio" value="No" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you attended a Driver Training school ? <span class="required">*</span> </div>
+                                            <label class="form-radio-label">
+                                                <input name=hasDriverTraining class="form-radio-field" type="radio" value="yes" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=hasDriverTraining class="form-radio-field" type="radio" value="no" required checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div id="hadDriverTraining" class="hide">
+                                            @await Html.PartialAsync("PartialViews/_GetContractInformation")
+                                        </div>
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you attended a school (not related to truck driving) in the last 3 Years ? <span class="required">*</span> </div>
+                                            <label class="form-radio-label">
+                                                <input name=isSchoolLast3Years class="form-radio-field" type="radio" value="yes" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isSchoolLast3Years class="form-radio-field" type="radio" value="no" required checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div id="hadSchoolLast3Years" class="hide">
+                                            @await Html.PartialAsync("PartialViews/_GetSchoolInformation")
+                                        </div>
+
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you been employed at any time within the last 3 years ? <span class="required">*</span> </div>
+                                            <label class="form-radio-label">
+                                                <input name=isEnemployedLast3Years class="form-radio-field" type="radio" value="yes" required id="isEnemployedLast3YearsYES" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isEnemployedLast3Years class="form-radio-field" type="radio" value="no" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div class="employer-info-table">
+                                                <div>
+                                                    <span class="header">
+
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="employmentArray" class="hide">
+                                            <div class="employer-info-grid">
+                                                <div>
+                                                    <span class="header">You have indicated that you were employed/contracted from the following dates:</span>
+                                                    <table cellpadding="0" class="tablegrid">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="h">Name</td>
+                                                                <td class="h">Location</td>
+                                                                <td class="h c">Start Date</td>
+                                                                <td class="h c">End Date</td>
+                                                                <td id="add-employment-record" class="h c"><i class="far fa-plus-square" title="add a new employment record"></i></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button type="submit" class="btn btn-primary" id="step6">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-7" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-7">
+                                    <fieldset>
+                                        <legend class="form-legend">
+                                            FMCSR
+                                        </legend>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Under FMCSR 391.15, are you currently disqualified from driving a commercial motor vehicle? [49 CFR 391.15] ? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isDrivingDisqualified class="form-radio-field" type="radio" value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isDrivingDisqualified class="form-radio-field" type="radio" value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div id="isDrivingDisqualifiedDetailShow" class="hide padding-15">
+                                                <div class="form-element form-textarea">
+                                                    <textarea id="isDrivingDisqualifiedDetail" class="form-element-field"></textarea>
+                                                    <div class="form-element-bar"></div>
+                                                    <label class="form-element-label" for="isDrivingDisqualifiedDetail">Please provide additional detail: <span class="required">*</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Has your license, permit, or privilege to drive ever been suspended or revoked for any reason [49 CFR 391.21(b)(9)] ? <span class="required">*</span> </div>
+                                            <label class="form-radio-label">
+                                                <input name=hadLicenseSuspense class="form-radio-field" type="radio" value="yes" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=hadLicenseSuspense class="form-radio-field" type="radio" value="no" required checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div id="hadLicenseSuspenseDetailShow" class="hide padding-15">
+                                                <div class="form-element form-textarea">
+                                                    <textarea id="hadLicenseSuspenseDetail" class="form-element-field"></textarea>
+                                                    <div class="form-element-bar"></div>
+                                                    <label class="form-element-label" for="hadLicenseSuspenseDetail"><span>Please provide additional detail, including <br class="class-br" /> the dates of the suspension(s)/revocation(s):</span><span class="required">*</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you ever been denied a license, permit, or privilege to operate a motor vehicle?[49 CFR 391.21(b)(9)] ? <span class="required">*</span> </div>
+                                            <label class="form-radio-label">
+                                                <input name=hadLicenseDenial class="form-radio-field" type="radio" value="yes" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=hadLicenseDenial class="form-radio-field" type="radio" value="no" required checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div id="hadLicenseDenialDetailShow" class="hide padding-15">
+                                                <div class="form-element form-textarea">
+                                                    <textarea id="hadLicenseDenialDetail" class="form-element-field"></textarea>
+                                                    <div class="form-element-bar"></div>
+                                                    <label class="form-element-label" for="hadLicenseDenialDetail"><span>Provide additional detail, including relevant dates:</span><span class="required">*</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Within the past two years, have you tested positive, or refused to test, on a pre-employment drug or alcohol test by an employer to whom you applied, but did not obtain, safety-sensitive transportation work covered by DOT agency drug and alcohol testing rules? [49 CFR 40.25(j)] ? <span class="required">*</span> </div>
+                                            <label class="form-radio-label">
+                                                <input name=didRefuseDrugTest class="form-radio-field" type="radio" value="yes" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=didRefuseDrugTest class="form-radio-field" type="radio" value="no" required checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div id="didRefuseDrugTestDetailShow" class="hide padding-15">
+                                                <div class="form-element form-textarea">
+                                                    <textarea id="didRefuseDrugTestDetail" class="form-element-field"></textarea>
+                                                    <div class="form-element-bar"></div>
+                                                    <label class="form-element-label" for="didRefuseDrugTestDetail"><span>Provide additional detail about what happened:</span><span class="required">*</span></label>
+                                                </div>
+                                                <div class="form-element form-input">
+                                                    <input id="lastRefuseDrugTestDate" type="text" class="form-element-field" />
+                                                    <div class="form-element-bar"></div>
+                                                    <label class="form-element-label" for="lastRefuseDrugTestDate">Date of last positive or refusal: <span class="required">*</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">
+                                                In the past three (3) years, have you ever been convicted of any of the following offenses committed during on-duty time [49 C.F.R. 391.15 and 49 C.F.R. 395.2]: ? <span class="required">*</span>
+                                                <ul>
+                                                    <li>Driving a commercial motor vehicle with a blood alcohol concentration ("BAC") of .04 percent or more</li>
+                                                    <li>Driving under the influence of alcohol, as prescribed by state law</li>
+                                                    <li>Refusal to undergo drug and alcohol testing as required by any jurisdiction for the enforcement of Federal Motor Carrier Safety Act regulations</li>
+                                                    <li>Driving a commercial motor vehicle under the influence of any 21 C.F.R. 1308.11 Schedule I identified controlled substance, an amphetamine, a narcotic drug, a formulation of an amphetamine, or a derivative of a narcotic drug</li>
+                                                    <li>Transportation, possession, or unlawful use of a 21 C.F.R. 1308.11 Schedule I identified controlled substance, amphetamines, narcotic drugs, formulations of an amphetamine, or derivatives of narcotic drugs while you were on duty driving for a motor carrier</li>
+                                                    <li>Leaving the scene of an accident while operating a commercial motor vehicle</li>
+                                                    <li>Or any other felony involving the use of a commercial motor vehicle</li>
+                                                </ul>
+                                            </div>
+                                            <label class="form-radio-label">
+                                                <input name=beenConvictedOnDuty class="form-radio-field" type="radio" value="yes" required />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=beenConvictedOnDuty class="form-radio-field" type="radio" value="no" required checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                            <div id="beenConvictedOnDutyDetailShow" class="hide padding-15">
+                                                <div class="form-element form-textarea">
+                                                    <textarea id="beenConvictedOnDutyDetail" class="form-element-field"></textarea>
+                                                    <div class="form-element-bar"></div>
+                                                    <label class="form-element-label" for="beenConvictedOnDutyDetailShow">Provide additional detail, including relevant dates:</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step7">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-8" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-8">
+                                    <fieldset>
+                                        <legend class="form-legend">
+                                            Traffic Convictions \ Violations
+                                        </legend>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Have you had any moving violations or traffic convictions in the past 3 Years ? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isMovingViolationPast3Y class="form-radio-field" type="radio" value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isMovingViolationPast3Y class="form-radio-field" type="radio" value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div id="getIncidentDetails" class="hide">
+                                            @await Html.PartialAsync("PartialViews/_GetIncidentDetails")
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step8">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-9" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-9">
+                                    <fieldset>
+                                        <legend class="form-legend">
+                                            Vehicle Accident Record
+                                        </legend>
+                                        <div class="form-radio form-radio-inline">
+                                            <div class="form-radio-legend">Were you involved in any accidents/incidents with any vehicle in the last 5 years (even if not at fault) ? <span class="required">*</span></div>
+                                            <label class="form-radio-label">
+                                                <input name=isAccidentInvolved class="form-radio-field" type="radio" value="yes" />
+                                                <i class="form-radio-button"></i>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="form-radio-label">
+                                                <input name=isAccidentInvolved class="form-radio-field" type="radio" value="no" checked />
+                                                <i class="form-radio-button"></i>
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                        <div id="getAccidentDetails" class="hide">
+                                            @await Html.PartialAsync("PartialViews/_GetAccidentDetails")
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step9">Next</button>
+                            </div>
+                        </form>
+                        <form id="test-l-11" class="content">
+                            <div class="text-left main-text form-card">
+                                <div id="step-11">
+                                    <fieldset>
+                                        @await Html.PartialAsync("PartialViews/_GetCriminalRecord")
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button class="btn btn-primary" id="step11">Next</button>
+                            </div>
+                        </form>
+
+                        <form id="test-l-10" class="content">
+                            <div class="text-left main-text form-card">
+                                <div>
+                                    <fieldset>
+                                        <legend class="form-legend">
+                                            Confirmation
+                                        </legend>
+                                        <hr />
+                                        <div>
+                                            Please verify that all of the information below is correct:
+                                        </div>
+                                        <div class="red-bold">
+                                            (You may need to scroll down to the bottom to continue)
+                                        </div>
+                                        <div id="generated">
+                                            <table cellpadding="5" cellspacing="5" align="center" width="100%" id="application_html" class="splitter">
+                                                <tbody id="tableBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div> <button type="button" class="btn btn-outline-primary" id="print">Print Form</button></div>
+                                        <div>
+                                            <ol>
+                                                <li>Choose driver's license pictures (front and back) </li>
+                                                <li>Click submit</li>
+                                                <li>Draw a signature</li>
+                                                <li>Accept the agreement</li>
+                                            </ol>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="licencePictureFront" type="file" accept="image/*" class="form-element-field" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="licencePicture">Upload License Front Side <span class="required">*</span></label>
+                                            <button type="button" class="btn btn-primary" id="licencePictureFrontSubmit" style="margin-top:15px">Submit</button>
+                                            <div id="frontReceived" style="font: italic; color: green;" class="hide">Picture received <i class="fas fa-image"></i></div>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="licencePictureBack" type="file" accept="image/*" class="form-element-field" required />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="licencePicture">Upload License Back Side <span class="required">*</span></label>
+                                            <button type="button" class="btn btn-primary" id="licencePictureBackSubmit" style="margin-top:15px">Submit</button>
+                                            <div id="backReceived" style="font: italic; color: green;" class="hide">Picture received <i class="fas fa-image"></i></div>
+                                        </div>
+                                        <div class="form-element form-input">
+                                            <input id="signature" type="file" accept="image/*" class="form-element-field" placeholder="if you have" />
+                                            <div class="form-element-bar"></div>
+                                            <label class="form-element-label" for="signature">Upload your e-signature (optional)</label>
+                                            <button type="button" class="btn btn-primary" id="signatureSubmit" style="margin-top:15px">Submit</button>
+                                            <div id="signatureReceived" style="font: italic; color: green;" class="hide">Signature received <i class="fas fa-image"></i></div>
+                                        </div>
+                                        <div class="notification-box">
+                                            <div class="info-notification-icon"><i class="fa fa-info-circle"></i></div>
+                                            <div class="info-notification-text">
+                                                <def class="color-grey small-font">By signing my application below, I agree to use an electronic signature to demonstrate my consent. An electronic signature is as legally binding as an ink signature.</def>
+                                                <br />
+                                                <def class="color-grey">
+                                                    <font face="Arial" size="+1">
+                                                        This certifies that this application was completed by me, and that all entries on it and information in it are true and complete to the best of my knowledge. I have read and agree to the full terms and conditions. I authorize the processing of my personal data.
+                                                    </font>
+                                                </def>
+                                            </div>
+                                        </div>
+                                        <div id="createdAt"></div>
+                                        <div class="sigPad canvas-size">
+                                            <p class="drawItDesc">Draw your signature</p>
+                                            <ul class="sigNav">
+                                                <li class="drawIt"><a href="#draw-it">Draw It</a></li>
+                                                <li class="clearButton"><a href="#clear">Clear</a></li>
+                                            </ul>
+                                            <div>
+                                                <div class="typed"></div>
+                                                <canvas class="pad"></canvas>
+                                                <input type="hidden" name="output" class="output">
+                                            </div>
+                                            <button type="button" id="accept" style="margin-top:10px;" disabled>I accept the terms of this agreement.</button>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="operation-btns">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="loader hide" id="loader">Loading...</div>
+        </div>
+    </div>
+    
+
+    <script src="~/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="~/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="~/plugins/js/employment.js"></script>
+    <script src="~/plugins/js/stepper.js"></script>
+
+    <script src="~/plugins/signature-pad/assets/jquery.signaturepad.js"></script>
+    <script src="~/plugins/signature-pad/assets/json2.min.js"></script>
+    <script src="~/plugins/js/signaturePad.js"></script>
+
+    <script>
+        document.addEventListener("change", function (event) {
+            let element = event.target;
+            if (element && element.matches(".form-element-field")) {
+                element.classList[element.value ? "add" : "remove"]("-hasvalue");
+            }
+
+
+        });
+
+    </script>
+</body>
+</html>

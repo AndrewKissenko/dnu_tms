@@ -1,0 +1,58 @@
+﻿@model IEnumerable<tms_inc.Models.Employees.Applicant>
+@{ 
+    Layout = null;
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Application role
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Created on
+                </th>
+
+                <th>
+                    Status
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.ApplicantFirstName  @item.ApplicantSecondName
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApplicationType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedAt)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        <a asp-action="EditApplicant" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="GetApplication" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="DeleteApplicant" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

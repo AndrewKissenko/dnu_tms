@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<!-- Allow local dev certs without trust warnings -->
+		<AllowUntrustedCertificate>true</AllowUntrustedCertificate>
+		<UserSecretsId>bafa1ade-3c32-4145-80ac-4abe1842865e</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+		<!-- (Uncomment if you use User Secrets) -->
+		<!-- <UserSecretsId>82f10a74-7917-4e7b-8f27-ce0bd8905345</UserSecretsId> -->
+	</PropertyGroup>
+
+	<!-- remove old unwanted view-folder -->
+	<ItemGroup>
+		<Compile Remove="Areas\Tms\Views\Career\NewFolder1\**" />
+		<Content Remove="Areas\Tms\Views\Career\NewFolder1\**" />
+		<EmbeddedResource Remove="Areas\Tms\Views\Career\NewFolder1\**" />
+		<None Remove="Areas\Tms\Views\Career\NewFolder1\**" />
+	</ItemGroup>
+
+	<!-- your external NuGet dependencies -->
+	<ItemGroup>
+		<!-- EF Core + Identity support -->
+		<PackageReference Include="AWSSDK.Core" Version="4.0.3.6" />
+		<PackageReference Include="AWSSDK.S3" Version="4.0.14.3" />
+		<PackageReference Include="FluentValidation" Version="12.1.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+
+		<!-- scaffolding tools for controllers/views -->
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+
+		<!-- other libs -->
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+		<PackageReference Include="FluentDateTime" Version="3.0.0" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.28" />
+		<PackageReference Include="jQuery.Steps" Version="1.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<!-- keep your static assets & folders -->
+	<!--<ItemGroup>
+		<Folder Include="wwwroot\StaticFiles\" />
+		<Folder Include="wwwroot\plugins\stepper\" />
+
+		--><!-- signature-pad assets --><!--
+		<Content Include="wwwroot\plugins\signature-pad\**\*.js" CopyToOutputDirectory="Never" />
+		<Content Include="wwwroot\plugins\signature-pad\**\*.swf" CopyToOutputDirectory="Never" />
+		<Content Include="wwwroot\plugins\signature-pad\**\*.svg" CopyToOutputDirectory="Never" />
+		<Content Include="wwwroot\plugins\signature-pad\**\*.map" CopyToOutputDirectory="Never" />
+		<None    Include="wwwroot\plugins\signature-pad\**\*.md" />
+		<TypeScriptCompile Include="wwwroot\plugins\signature-pad\package\src\**\*.ts" />
+		<TypeScriptCompile Include="wwwroot\plugins\signature-pad\package\dist\types\**\*.d.ts" />
+	</ItemGroup>-->
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<!-- your existing VS user-property entries -->
+			<UserProperties wwwroot_4lib_4bootstrap_4dist_4css_4bootstrap_1css_1map__JsonSchema="https://json.schemastore.org/sarif-external-property-file-2.1.0-rtm.4.json" />
+		</VisualStudio>
+	</ProjectExtensions>
+</Project>

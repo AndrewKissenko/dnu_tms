@@ -1,0 +1,37 @@
+﻿
+
+@model tms_inc.Models.ViewModels.UnprocessedNumsViewModel
+@if (User.Identity.IsAuthenticated)
+{
+    <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        .list-group li:hover {
+            background-color: cornflowerblue;
+        }
+
+        .nav-pills a {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        @{
+            object applicantsNum = @Model.ApplicantsNum > 0 ? @Model.ApplicantsNum.ToString() : null;
+            object quoteRequestsNum = @Model.QuoteRequestsNum > 0 ? @Model.QuoteRequestsNum.ToString() : null;
+            object contactMeRequestsNum = @Model.ContactMeRequestsNum > 0 ? @Model.ContactMeRequestsNum.ToString() : null;
+        }
+
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info active" id="hire" aria-current="page"><span>Hire me</span> <span class="badge badge-danger badge-pill">@applicantsNum</span></a>
+            <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info" id="quote"><span>Give me a quote</span><span class="badge badge-danger badge-pill">@quoteRequestsNum</span></a>
+            <a class="flex-sm-fill text-sm-center nav-link btn btn-outline-info" id="contact"><span>Contact me</span><span class="badge badge-danger badge-pill">@contactMeRequestsNum</span></a>
+        </nav>
+        <div id="result"></div>
+        <script src="~/plugins/js/updates.js"></script>
+
+    </body>
+</html>
+            }

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<tms_inc.Models.Position.Position>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" id="positions">
+    <thead>
+        <tr>
+            <th>
+                Position
+            </th>
+            <th>
+                Position type
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th id="job-introduction">
+                Job introduction
+            </th>
+            <th id="description">
+                Job responsibilities description
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                Created on
+            </th>
+
+            <th class="menu-btns"></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobResponsibilityIntro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobResponsibilitiesString)
+            </td>
+            <td>
+              
+                @item.EndDate.ToShortDateString()
+            </td>
+            <td>
+              @item.CreatedAt.ToShortDateString()
+            </td>
+  
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

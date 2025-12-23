@@ -1,0 +1,51 @@
+﻿@{ Layout = null; }
+@model tms_inc.Models.Employees.Applicant
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/plugins/css/otherApplication.css">
+    <link rel="stylesheet" href="~/plugins/css/app-modal.css" />
+    <link rel="stylesheet" href="~/plugins/css/loadingp-overlay.css" />
+
+</head>
+<body>
+
+    <form method="post" id="cvForm">
+
+        <h1>Apply now</h1>
+
+        <fieldset>
+            <legend><span class="number">1</span>Your basic info</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="applicantFirstName" required>
+
+            <label for="mail">Last name:</label>
+            <input type="text" id="lastName" name="applicantSecondName" required>
+
+            <label for="mail">Phone:</label>
+            <input type="number" id="phone" name="phone" required>
+        </fieldset>
+
+        <fieldset>
+            <legend><span class="number">2</span>Your CV</legend>
+        </fieldset>
+        <fieldset>
+            <label for="job">Upload your CV file:</label>
+            <input id="cv" type="file" accept=".docx,.pdf" class="form-element-field" required />
+            @* <button type="button" id="cvFileSubmit" style="margin-top:15px">Submit</button> *@
+            <div id="cvFileReceived" style="font: italic; color: green;padding-top:15px" class="hide">CV received <i class="fas fa-image"></i></div>
+        </fieldset>
+        <button class="apply" type="button"  id="accept">Apply</button>
+    </form>
+    @await Html.PartialAsync("_AppModal")
+    @await Html.PartialAsync("_LoadingOverlay")
+
+    <script src="~/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="~/plugins/js/app-modal.js"></script>
+    <script src="~/plugins/js/loading.js"></script>
+    <script src="~/plugins/js/file-service.js"></script>
+    <script src="~/plugins/js/otherApplication.js"></script>
+
+</body>
+</html>

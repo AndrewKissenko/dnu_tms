@@ -1,0 +1,63 @@
+﻿@model IEnumerable<tms.Models.Driver>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+  
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+     
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <th>
+                        Truck
+                    </th>
+                    <th>
+                        Trailer
+                    </th>
+                    <th>
+                        Dispatcher
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Truck.TruckId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Trailer.TrailerNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName[0])
+                    </td>
+                   
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                     
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }

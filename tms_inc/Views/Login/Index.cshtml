@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/home/home.css" />
+</head>
+<body>
+    <div class="wrapper fadeInDown" id="login">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- Icon -->
+            @*<div class="fadeIn first">
+                    <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+                </div>*@
+
+            <!-- Login Form -->
+            <form asp-action="Login">
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+            <div>@ViewBag?.Message</div>
+        </div>
+    </div>
+</body>
+</html>

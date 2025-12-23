@@ -1,0 +1,43 @@
+﻿@model IEnumerable<tms.Models.DriverCity>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <table class="trucks" border="1" width="100%">
+        <tbody>
+
+            <tr class="head grey-line">
+                <td class="user" valign="middle">User</td>
+                <td class="driver" valign="middle">Driver</td>
+                <td class="phone" valign="middle">Phone</td>
+                <td class="truck" valign="middle">Truck</td>
+                <td class="location" valign="middle">Location</td>
+                <td class="comment" valign="middle">Comment</td>
+            </tr>
+
+            @foreach (var driverCity in Model)
+            {
+                <tr class="value">
+                    @{
+                        string user="";
+                        if (driverCity != null)
+                        {
+                             user = driverCity.Driver.User.FirstName + driverCity.Driver.User.LastName[0];
+                        }
+                    }
+                    <td hidden class="driver-id">@driverCity.Driver.Id</td>
+                    <td class="user" valign="middle">@user</td>
+                    <td class="driver" valign="middle">@driverCity.Driver.Name</td>
+                    <td class="phone" valign="middle">@driverCity.Driver.Phone</td>
+                    <td class="truck" valign="middle">@driverCity.Driver.Truck.TruckId</td>
+                    <td class="location" valign="middle">@driverCity.City.CityName, @driverCity.City.State</td>
+                    <td class="comment" valign="middle">
+                        <textarea rows="3" class="comment-area">@driverCity.Comment</textarea>
+                    </td>
+                </tr>
+                        }
+
+
+        </tbody>
+    </table>
+
+                        }

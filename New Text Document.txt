@@ -1,0 +1,30 @@
+
+                                    @*<div class="form-radio form-radio-inline">
+                                        <div class="form-radio-legend">Within the past two years, have you tested positive, or refused to test, on a pre-employment drug or alcohol test by an employer to whom you applied, but did not obtain, safety-sensitive transportation work covered by DOT agency drug and alcohol testing rules? [49 CFR 40.25(j)] ? <span class="required">*</span> </div>
+                                        <label class="form-radio-label">
+                                            <input name=didRefuseDrugTest class="form-radio-field" type="radio" value="yes" required />
+                                            <i class="form-radio-button"></i>
+                                            <span>Yes</span>
+                                        </label>
+                                        <label class="form-radio-label">
+                                            <input name=didRefuseDrugTest class="form-radio-field" type="radio" value="no" required checked />
+                                            <i class="form-radio-button"></i>
+                                            <span>No</span>
+                                        </label>
+                                        <div id="didRefuseDrugTestDetailShow" class="hide padding-15">
+                                            <div class="form-element form-textarea">
+                                                <textarea id="didRefuseDrugTestDetail" class="form-element-field"></textarea>
+                                                <div class="form-element-bar"></div>
+                                                <label class="form-element-label" for="didRefuseDrugTestDetail"><span>Provide additional detail about what happened:</span><span class="required">*</span></label>
+                                            </div>
+                                            <div class="form-element form-input">
+                                                <input id="lastRefuseDrugTestDate" type="date" class="form-element-field" />
+                                                <div class="form-element-bar"></div>
+                                                <label class="form-element-label" for="lastRefuseDrugTestDate">Date of last positive or refusal: <span class="required">*</span></label>
+                                            </div>
+                                        </div>
+                                    </div>*@
+
+//let generateDrugTestDetailShow = function () {
+//    generateFormBase("didRefuseDrugTest", "didRefuseDrugTestDetailShow", "didRefuseDrugTestDetail");
+//}

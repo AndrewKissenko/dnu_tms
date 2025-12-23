@@ -1,0 +1,25 @@
+﻿@model IEnumerable<tms.Models.Trailer>
+@if (User.Identity.IsAuthenticated)
+{
+    <div id="fix">
+        <table class="trailers" border="1" width="100%">
+            <tbody>
+                <tr class="head">
+                    <td class="value" valign="middle">Trailer</td>
+                    <td class="value" valign="middle">Status</td>
+                </tr>
+                @foreach (var trailer in Model)
+                {
+                    <tr class="value">
+
+                        <td class="trailer" valign="middle">@trailer.TrailerNumber</td>
+                        <td class="status" valign="middle">+</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+}

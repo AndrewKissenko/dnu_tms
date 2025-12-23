@@ -1,0 +1,127 @@
+﻿<legend class="form-legend">
+    Driver Training
+</legend>
+
+<div class="form-element form-input" style="display:flex; flex-direction:row; justify-content:space-between">
+    <div style="width: 48%">
+        <input id="startDate" type="text" class="form-element-field" />
+        <div class="form-element-bar"></div>
+        <label class="form-element-label" for="startDate">Start date: <span class="required">*</span></label>
+    </div>
+    <div style="width: 48%">
+        <input id="endDate" type="text" class="form-element-field"  />
+        <div class="form-element-bar"></div>
+        <label class="form-element-label" for="endDate">End date: <span class="required">*</span></label>
+    </div>
+</div>
+
+<div class="form-element form-select">
+    <select id="trainingState" class="form-element-field">
+        @await Html.PartialAsync("PartialViews/_GetStateList")
+    </select>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="trainingState">State/Province <span class="required">*</span> (where school is located)</label>
+</div>
+
+<div class="form-element form-textarea">
+    <input type="text" id="trainingSchoolName" class="form-element-field" />
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="trainingSchoolName">School name <span class="required">*</span></label>
+</div>
+<div class="form-element form-textarea">
+    <input type="text" id="trainingCity" class="form-element-field"/>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="trainingCity">City <span class="required">*</span></label>
+</div>
+<div class="form-element form-textarea">
+    <input id="telephone" class="form-element-field" type="tel"/>
+    <div class="form-element-bar"></div>
+    <label class="form-element-label" for="telephone">Telephone </label>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Did you graduate ? <span class="required">*</span> </div>
+    <label class="form-radio-label">
+        <input name=isGraduated class="form-radio-field" type="radio" value="yes" />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=isGraduated class="form-radio-field" type="radio" value="no" />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Were you subject to the Federal Motor Carrier while attending this truck school ? <span class="required">*</span> </div>
+    <label class="form-radio-label">
+        <input name=hasFederalMotorCarrierSubject class="form-radio-field" type="radio" value="yes"  />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=hasFederalMotorCarrierSubject class="form-radio-field" type="radio" value="no"  />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+<div class="form-radio form-radio-inline">
+    <div class="form-radio-legend">Did you perform any safety sensitive functions at this truck school, regulated by DOT, and subject to drug and alcohol testing ? <span class="required">*</span> </div>
+    <label class="form-radio-label">
+        <input name=hasAlcoDrugTestingSubject class="form-radio-field" type="radio" value="yes"  />
+        <i class="form-radio-button"></i>
+        <span>Yes</span>
+    </label>
+    <label class="form-radio-label">
+        <input name=hasAlcoDrugTestingSubject class="form-radio-field" type="radio" value="no"  />
+        <i class="form-radio-button"></i>
+        <span>No</span>
+    </label>
+</div>
+
+<div class="form-element form-input" style="display:flex; flex-direction:row; justify-content:space-between">
+    <div style="width: 45%">
+        <input id="gpa" type="text" class="form-element-field" />
+        <div class="form-element-bar"></div>
+        <label class="form-element-label" for="gpa">GPA </label>
+    </div>
+    <div style="width: 45%">
+        <input id="trainingTime" type="number" min="0" max="180" class="form-element-field" />
+        <div class="form-element-bar"></div>
+        <label class="form-element-label" for="trainingTime">Hours of Instruction</label>
+    </div>
+</div>
+
+<div class="form-checkbox form-checkbox-inline" id="trainedSkills">
+    <div class="form-checkbox-legend">Endorsements</div>
+    <label class="form-checkbox-label">
+        <input name=none class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>None</span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=borderCrossing class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>Border Crossing</span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=logBooks class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>Log Books</span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=federalMotorCarrierRegulations class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>
+            Federal Motor Carrier Regulations
+        </span>
+    </label>
+    <label class="form-checkbox-label">
+        <input name=hazardousMaterials class="form-checkbox-field" type="checkbox" />
+        <i class="form-checkbox-button"></i>
+        <span>
+            Hazardous Materials
+        </span>
+    </label>
+</div>
